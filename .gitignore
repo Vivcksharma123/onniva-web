@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large GIF files
+public/img/graphic-1.gif
+public/img/graphic-2.gif
