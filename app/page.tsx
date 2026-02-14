@@ -1,65 +1,248 @@
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ClientScripts from "./components/ClientScripts";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Header />
+      <main>
+        <div id="home-slider">
+          <div className="slider-wrap">
+            <div className="text">
+              <h1>
+                <span>AI-Driven Call, Chat & Email Automation for Smarter Customer Engagement</span>
+              </h1>
+              <div><p>Automate responses, streamline support, and boost conversions with intelligent AI Call, chat and email assistants no coding required.</p></div>
+              <div className="default_btn">
+                <a href="/contact">get started now</a>
+              </div>
+            </div>
+          </div>
+          <div className="parallax">
+            <div className="foreground">
+              <Image src="/img/robot.png" alt="Robot" width={500} height={500} />
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <section className="aboutUs-sec">
+          <div className="slider-wrap">
+            <div className="imgBox">
+              <Image src="/img/about-img.webp" alt="About" className="img-responsive" width={600} height={400} />
+            </div>
+            <div className="text">
+              <div className="text-wrap">
+                <div className="heading">
+                  <h5>About Us</h5>
+                  <h2>Who We Are</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla, ac sagittis sem ultrices vitae. Aliquam mi arcu, molestie non iaculis sit amet, maximus sed justo. In vehicula placerat risus, vitae ornare justo volutpat eu. Ut ornare enim vitae porttitor pharetra. In viverra non tellus congue venenatis.</p>
+                <ul>
+                  <li><a href="#"><Image src="/img/icon-1.png" alt="" width={30} height={30} />AI Representative</a></li>
+                  <li><Image src="/img/chat-ico.png" alt="" width={30} height={30} />AI Chatbot</li>
+                  <li><a href="#"><Image src="/img/email-ico.png" alt="" width={30} height={30} />AI Email Responder</a></li>
+                </ul>
+                <div className="default_btn">
+                  <a href="#">Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="serv-sec black_bg">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="heading">
+                  <h2>Our Solution</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla, ac sagittis sem ultrices vitae. Aliquam mi arcu, molestie non iaculis sit amet, maximus sed justo. In vehicula placerat risus, vitae ornare justo volutpat eu. Ut ornare enim vitae porttitor pharetra. In viverra non tellus congue venenatis.</p>
+                </div>
+              </div>
+              <div className="col-md-4 col-sm-12">
+                <div className="serv-box">
+                  <div className="img">
+                    <Image src="/img/ai-ico.png" alt="AI" className="img-responsive" width={80} height={80} />
+                  </div>
+                  <div className="text">
+                    <h3>AI Representative</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla,</p>
+                    <div className="default_btn">
+                      <a href="#">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 col-sm-12">
+                <div className="serv-box">
+                  <div className="img">
+                    <Image src="/img/aiChatbot-ico.png" alt="Chatbot" className="img-responsive" width={80} height={80} />
+                  </div>
+                  <div className="text">
+                    <h3>AI Chatbot</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla,</p>
+                    <div className="default_btn">
+                      <a href="#">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4 col-sm-12">
+                <div className="serv-box">
+                  <div className="img">
+                    <Image src="/img/aiEmail-ico.png" alt="Email" className="img-responsive" width={80} height={80} />
+                  </div>
+                  <div className="text">
+                    <h3>AI Email Responder</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla,</p>
+                    <div className="default_btn">
+                      <a href="#">Read more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="ctaSec">
+          <div className="sec-wrap">
+            <h2>Book a Demo</h2>
+            <p>Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.</p>
+            <div className="default_btn2">
+              <a href="#">get started now</a>
+            </div>
+          </div>
+          <svg width="100%" id="wave_svg" viewBox="0 10 500 5">
+            <defs>
+              <linearGradient id="gradient_svg" x1="70%" y1="70%" x2="0%" y2="0%">
+                <stop offset="0%" stopColor="#2e03a6" />
+                <stop offset="50%" stopColor="#c025ff" />
+                <stop offset="100%" stopColor="#ff049f" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </section>
+
+        <div className="sec_group">
+          <div className="lines">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
+          <section className="Feature-sec">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-8">
+                  <div className="heading">
+                    <h2>Key Feature</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla, ac sagittis sem ultrices vitae.</p>
+                  </div>
+                </div>
+                <div className="col-md-12">
+                  <div id="FeatureSlider" className="owl-carousel owl-theme">
+                    {[1, 2, 3, 1, 2].map((num, idx) => (
+                      <div className="item" key={idx}>
+                        <div className="feature-box">
+                          <a href="#">
+                            <div className="img">
+                              <Image src={`/img/featureimg-${num}.webp`} alt="Feature" className="img-responsive" width={300} height={200} />
+                            </div>
+                            <div className="text">
+                              <h4>{num === 1 ? 'Phone Call Analytics' : num === 2 ? 'Case Summary' : 'Real-Time Case Transcripts'}</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla,</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="SuccessStories-sec">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-8">
+                  <div className="heading">
+                    <h2>Success Stories</h2>
+                  </div>
+                </div>
+                <div className="col-md-12">
+                  <div id="StoriesSlides" className="owl-carousel owl-theme">
+                    {[1, 2, 3, 4].map((_, idx) => (
+                      <div className="item" key={idx}>
+                        <div className="testimonial-bx">
+                          <div className="rating"></div>
+                          <p>Lorem ipsum sit amet, consectetur adipisicing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat. Duis aute irure dolor.</p>
+                          <h4>Lorem ipsum</h4>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div className="faqSec-group">
+          <section className="ctaSec2">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-8">
+                  <div className="text">
+                    <h2>We&apos;re here to help</h2>
+                    <h4>For any inquiries or to place an order, please contact us</h4>
+                    <div className="default_btn">
+                      <a href="#">Contact us now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="faq-sec">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-8">
+                  <div className="heading">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem</p>
+                  </div>
+                  <div className="faq_main">
+                    {[1, 2, 3, 4, 5, 6].map((_, idx) => (
+                      <div className="faq_row" key={idx}>
+                        <div className="faq_question">
+                          <div className="faq_question-text">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                          </div>
+                          <div className="icon">
+                            <div className="icon-shape"></div>
+                          </div>
+                        </div>
+                        <div className="answercont">
+                          <div className="answer">
+                            <p>Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
-    </div>
+      <Footer />
+      <ClientScripts />
+    </>
   );
 }

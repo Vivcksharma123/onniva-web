@@ -1,0 +1,158 @@
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: normal;
+    src: url("fa-brands-400.eot");
+    src: url("fa-brands-400.eot?#iefix") format("embedded-opentype"), url("fa-brands-400.woff2") format("woff2"), url("fa-brands-400.woff") format("woff"), url("fa-brands-400.ttf") format("truetype"), url("fa-brands-400.svg#fontawesome") format("svg"); }
+
+    .fab, .fa{
+    font-family: 'Font Awesome 5 Brands'; }
+    @font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url("fa-regular-400.eot");
+  src: url("fa-regular-400.eot?#iefix") format("embedded-opentype"), url("fa-regular-400.woff2") format("woff2"), url("fa-regular-400.woff") format("woff"), url("fa-regular-400.ttf") format("truetype"), url("fa-regular-400.svg#fontawesome") format("svg"); }
+
+  .fas {
+    font-family: 'Font Awesome 5 Brands'; }
+    @font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url("fa-solid-900.eot");
+  src: url("fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fa-solid-900.woff2") format("woff2"), url("fa-solid-900.woff") format("woff"), url("fa-solid-900.ttf") format("truetype"), url("fa-solid-900.svg#fontawesome") format("svg"); }
+
+
+   .far {
+    font-family: 'Font Awesome 5 Brands'; }
+    @font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url("fa-solid-900.eot");
+  src: url("fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fa-solid-900.woff2") format("woff2"), url("fa-solid-900.woff") format("woff"), url("fa-solid-900.ttf") format("truetype"), url("fa-solid-900.svg#fontawesome") format("svg"); }
+
+  .fal {
+    font-family: 'Font Awesome 5 Brands'; }
+    @font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url("fa-solid-900.eot");
+  src: url("fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fa-solid-900.woff2") format("woff2"), url("fa-solid-900.woff") format("woff"), url("fa-solid-900.ttf") format("truetype"), url("fa-solid-900.svg#fontawesome") format("svg"); }
+
+
+  .pro-fa {
+    font-family: 'pro-fa-brands-400-5.0.10'; }
+    @font-face {
+    font-family: 'pro-fa-brands-400-5.0.10';
+    font-style: normal;
+    font-weight: 400;
+    src: url("pro-fa-brands-400-5.0.0.eot");
+  src: url("pro-fa-brands-400-5.0.0.eot?#iefix") format("embedded-opentype"),   url("pro-fa-brands-400-5.0.0.ttf") format("truetype"), }
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-ExtraBold.woff2') format('woff2'),
+        url('Poppins-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Black.woff2') format('woff2'),
+        url('Poppins-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Bold.woff2') format('woff2'),
+        url('Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Light.woff2') format('woff2'),
+        url('Poppins-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Medium.woff2') format('woff2'),
+        url('Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.woff2') format('woff2'),
+        url('Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-SemiBold.woff2') format('woff2'),
+        url('Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter 24pt';
+    src: url('Inter24pt-ExtraBold.woff2') format('woff2'),
+        url('Inter24pt-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter 24pt';
+    src: url('Inter24pt-Bold.woff2') format('woff2'),
+        url('Inter24pt-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter 24pt';
+    src: url('Inter24pt-SemiBold.woff2') format('woff2'),
+        url('Inter24pt-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter 24pt';
+    src: url('Inter24pt-Black.woff2') format('woff2'),
+        url('Inter24pt-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
