@@ -122,32 +122,6 @@ const tabData = [
   },
 ];
 
-const faqData = [
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    answer: 'Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    answer: 'Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    answer: 'Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    answer: 'Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    answer: 'Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.',
-  },
-  {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    answer: 'Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.',
-  },
-];
 
 export default function IndustriesPage() {
   const [activeTab, setActiveTab] = useState(tabData[0].id);

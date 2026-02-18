@@ -1,10 +1,31 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ClientScripts from '../components/ClientScripts';
 
 export default function PricingPage() {
+  const [voiceMins, setVoiceMins] = useState(0);
+  const [emailQty, setEmailQty] = useState(0);
+  const [chatQty, setChatQty] = useState(0);
+  const [totalCredits, setTotalCredits] = useState(0);
+  const [totalCost, setTotalCost] = useState(0);
+
+  const calculateCredits = () => {
+    const voiceCredits = voiceMins * 60;
+    const emailCredits = emailQty * 10000;
+    const chatCredits = chatQty * 5000;
+    const total = voiceCredits + emailCredits + chatCredits;
+    const cost = (total / 2000) * 10;
+    setTotalCredits(total);
+    setTotalCost(cost);
+  };
+
+  useEffect(() => {
+    calculateCredits();
+  }, [voiceMins, emailQty, chatQty]);
   return (
     <>
       <Header />
@@ -119,25 +140,52 @@ export default function PricingPage() {
                       <label>Chatbot active on website</label>
                       <p><span>5,000</span> credits</p>
                     </div>
-                    <input type="text" placeholder="Enter you choice" />
+                    <input 
+                      type="number" 
+                      id="chat-qty"
+                      min="0"
+                      max="999"
+                      value={chatQty || ''}
+                      onChange={(e) => setChatQty(Math.min(999, Math.max(0, Number(e.target.value))))}
+                      placeholder="0"
+                      style={{ outline: 'none' }}
+                    />
                   </div>
                   <div className="form-box">
                     <div className="lebel">
                       <label>Email Managing</label>
                       <p><span>10,000</span> credits</p>
                     </div>
-                    <input type="email" placeholder="Enter you choice" />
+                    <input 
+                      type="number" 
+                      id="email-qty"
+                      min="0"
+                      max="999"
+                      value={emailQty || ''}
+                      onChange={(e) => setEmailQty(Math.min(999, Math.max(0, Number(e.target.value))))}
+                      placeholder="0"
+                      style={{ outline: 'none' }}
+                    />
                   </div>
                   <div className="form-box">
                     <div className="lebel">
-                      <label>Voice handling 50 mins</label>
-                      <p><span>10,000</span> credits</p>
+                      <label>Voice handling (minutes)</label>
+                      <p><span>1 credit/sec</span></p>
                     </div>
-                    <input type="text" placeholder="Enter you choice" />
+                    <input 
+                      type="number" 
+                      id="voice-mins"
+                      min="0"
+                      max="999"
+                      value={voiceMins || ''}
+                      onChange={(e) => setVoiceMins(Math.min(999, Math.max(0, Number(e.target.value))))}
+                      placeholder="0"
+                      style={{ outline: 'none' }}
+                    />
                   </div>
                   <div className="total">
-                    <h5>Total Monthly Cost</h5>
-                    <p>18,000 Credits ≈ $90/month</p>
+                    <h5>Total Cost</h5>
+                    <p><span id="total-credits">{totalCredits.toLocaleString()}</span> Credits ≈ <span id="total-cost">${totalCost.toFixed(2)}</span>/month</p>
                   </div>
                 </div>
               </div>
@@ -219,6 +267,25 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="ctaSec">
+          <div className="sec-wrap">
+            <h2>Start Your Professional AI Transformation Today.</h2>
+            <p>Volume discounts available for Enterprise clients requiring over 1,000,000 credits per month.</p>
+            <div className="default_btn2">
+              <a href="/contact">Get Started - $399 Setup</a>
+            </div>
+          </div>
+          <svg width="100%" id="wave_svg" viewBox="0 10 500 5">
+            <defs>
+              <linearGradient id="gradient_svg" x1="70%" y1="70%" x2="0%" y2="0%">
+                <stop offset="0%" stopColor="#2e03a6" />
+                <stop offset="50%" stopColor="#c025ff" />
+                <stop offset="100%" stopColor="#ff049f" />
+              </linearGradient>
+            </defs>
+          </svg>
         </section>
       </div>
 

@@ -27,8 +27,8 @@ export default function Header() {
                   <Link href="#">Solutions</Link>
                   <ul>
                     <li><Link href="/ai-representative">AI Representative</Link></li>
-                    <li><Link href="#">Solutions 2</Link></li>
-                    <li><Link href="#">Solutions 3</Link></li>
+                    <li><Link href="/ai-chatbot">AI Chatbot</Link></li>
+                    <li><Link href="/ai-email-responder">AI Email Responder</Link></li>
                   </ul>
                 </li>
                 <li><Link href="/use-case">Use Cases</Link></li>

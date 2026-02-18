@@ -43,8 +43,8 @@ export default function Home() {
                 <p>From AI-powered live chat to automated email response workflows, Oniva combines powerful machine learning with intuitive design to transform how you communicate with users.</p>
                 <ul>
                   <li><a href="/ai-representative"><Image src="/img/icon-1.png" alt="" width={30} height={30} />AI Representative</a></li>
-                  <li><a href="#"><Image src="/img/chat-ico.png" alt="" width={30} height={30} />AI Chatbot</a></li>
-                  <li><a href="#"><Image src="/img/email-ico.png" alt="" width={30} height={30} />AI Email Responder</a></li>
+                  <li><a href="/ai-chatbot"><Image src="/img/chat-ico.png" alt="" width={30} height={30} />AI Chatbot</a></li>
+                  <li><a href="/ai-email-responder"><Image src="/img/email-ico.png" alt="" width={30} height={30} />AI Email Responder</a></li>
                 </ul>
               </div>
             </div>

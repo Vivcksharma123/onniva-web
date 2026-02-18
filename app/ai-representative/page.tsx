@@ -1,68 +1,159 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ClientScripts from "../components/ClientScripts";
 import Image from "next/image";
 
-export default function Solutions() {
+const audioData = [
+  {
+    title: 'Sound Waves',
+    description: 'Lorem ipsum dolor sit amet',
+    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
+  },
+  {
+    title: 'Sound Waves',
+    description: 'Lorem ipsum dolor sit amet',
+    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
+  }
+];
+
+function AudioPlayer({ title, description, src, index }: { title: string; description: string; src: string; index: number }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [volume, setVolume] = useState(1);
+  const [liked, setLiked] = useState(false);
+  const [likes, setLikes] = useState(303);
+
+  const waveformBars = useMemo(() => 
+    Array.from({ length: 50 }, () => ({
+      height: Math.random() * 100,
+      delay: Math.random() * 0.5
+    })),
+    []
+  );
+
   useEffect(() => {
-    document.querySelectorAll(".audio-card").forEach(card => {
-      const audio = card.querySelector("audio") as HTMLAudioElement;
-      const seek = card.querySelector(".seek") as HTMLInputElement;
-      const durationText = card.querySelector(".duration") as HTMLElement;
-      const playBtn = card.querySelector(".play-btn") as HTMLElement;
+    const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
+    if (!audio) return;
 
-      if (!audio || !seek || !durationText || !playBtn) return;
+    const handleLoadedMetadata = () => setDuration(audio.duration);
+    const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
+    const handleEnded = () => setIsPlaying(false);
 
-      const handlePlay = () => {
-        document.querySelectorAll("audio").forEach(a => {
-          if (a !== audio) {
-            a.pause();
-            a.currentTime = 0;
-            const btn = a.closest(".audio-card")?.querySelector(".play-btn") as HTMLElement;
-            if (btn) btn.innerHTML = "▶";
-          }
-        });
+    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+    audio.addEventListener('timeupdate', handleTimeUpdate);
+    audio.addEventListener('ended', handleEnded);
 
-        if (audio.paused) {
-          audio.play();
-          playBtn.innerHTML = "❚❚";
-        } else {
-          audio.pause();
-          playBtn.innerHTML = "▶";
-        }
-      };
+    return () => {
+      audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      audio.removeEventListener('timeupdate', handleTimeUpdate);
+      audio.removeEventListener('ended', handleEnded);
+    };
+  }, [index]);
 
-      const handleLoadedMetadata = () => {
-        seek.max = Math.floor(audio.duration).toString();
-      };
+  const togglePlay = async () => {
+    const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
+    if (!audio) return;
 
-      const handleTimeUpdate = () => {
-        seek.value = Math.floor(audio.currentTime).toString();
-        let m = Math.floor(audio.currentTime / 60);
-        let s = Math.floor(audio.currentTime % 60);
-        durationText.textContent = m + ":" + (s < 10 ? "0" + s : s);
-      };
-
-      const handleSeek = () => {
-        audio.currentTime = parseInt(seek.value);
-      };
-
-      playBtn.addEventListener("click", handlePlay);
-      audio.addEventListener("loadedmetadata", handleLoadedMetadata);
-      audio.addEventListener("timeupdate", handleTimeUpdate);
-      seek.addEventListener("input", handleSeek);
-
-      return () => {
-        playBtn.removeEventListener("click", handlePlay);
-        audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
-        audio.removeEventListener("timeupdate", handleTimeUpdate);
-        seek.removeEventListener("input", handleSeek);
-      };
+    document.querySelectorAll('audio').forEach((a, i) => {
+      if (i !== index && !a.paused) {
+        a.pause();
+      }
     });
-  }, []);
+
+    if (audio.paused) {
+      try {
+        await audio.play();
+        setIsPlaying(true);
+      } catch (error) {
+        console.log('Play error:', error);
+      }
+    } else {
+      audio.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
+    if (audio) {
+      audio.currentTime = Number(e.target.value);
+      setCurrentTime(Number(e.target.value));
+    }
+  };
+
+  const handleVolumeToggle = () => {
+    const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
+    if (audio) {
+      const newVolume = audio.volume > 0 ? 0 : 1;
+      audio.volume = newVolume;
+      setVolume(newVolume);
+    }
+  };
+
+  const handleLike = () => {
+    setLiked(!liked);
+    setLikes(liked ? likes - 1 : likes + 1);
+  };
+
+  const formatTime = (time: number) => {
+    const m = Math.floor(time / 60);
+    const s = Math.floor(time % 60);
+    return `${m}:${s < 10 ? '0' + s : s}`;
+  };
+
+  return (
+    <div className="audio-player">
+      <div className="audio-card">
+        <div className="audio-row">
+          <div className="play-btn" onClick={togglePlay}>
+            {isPlaying ? '❚❚' : '▶'}
+          </div>
+          <div className="audio-info">
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </div>
+          <div className={`waveform ${isPlaying ? 'playing' : ''}`}>
+            {waveformBars.map((bar, i) => (
+              <span key={i} style={{ height: `${bar.height}%`, animationDelay: `${bar.delay}s` }} />
+            ))}
+          </div>
+          <div className="duration">{formatTime(currentTime)}</div>
+        </div>
+        <div className="flex">
+          <div className="progress">
+            <input
+              type="range"
+              value={currentTime}
+              min="0"
+              max={duration || 0}
+              step="1"
+              className="seek"
+              onChange={handleSeek}
+            />
+          </div>
+          <div className="actions">
+            <span onClick={handleVolumeToggle}>
+              <i className={`fa fa-volume-${volume > 0 ? 'up' : 'off'}`} aria-hidden="true"></i>
+            </span>
+            <span onClick={handleLike} style={{ color: liked ? '#e91e63' : 'inherit', cursor: 'pointer' }}>
+              <i className={`fa fa-heart${liked ? '' : '-o'}`} aria-hidden="true"></i> {likes}
+            </span>
+            <span>
+              <i className="fa fa-download" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <audio id={`audio-${index}`} src={src}></audio>
+      </div>
+    </div>
+  );
+}
+
+export default function Solutions() {
   return (
     <>
       <Header />
@@ -211,54 +302,15 @@ export default function Solutions() {
             <div className="row">
               <div className="col-md-12">
                 <div className="audiowrap">
-                  <div className="audio-player">
-                    <div className="audio-card">
-                      <div className="audio-row">
-                        <div className="play-btn" onClick={() => {}}>▶</div>
-                        <div className="audio-info">
-                          <h3>Sound Waves</h3>
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div className="waveform"></div>
-                        <div className="duration">0:00</div>
-                      </div>
-                      <div className="flex">
-                        <div className="progress">
-                          <input type="range" defaultValue="0" min="0" step="1" className="seek" />
-                        </div>
-                        <div className="actions">
-                          <span onClick={() => {}}><i className="fa fa-volume-up" aria-hidden="true"></i></span>
-                          <span onClick={() => {}}><i className="fa fa-heart" aria-hidden="true"></i> 303</span>
-                          <span onClick={() => {}}><i className="fa fa-download" aria-hidden="true"></i></span>
-                        </div>
-                      </div>
-                      <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-                    </div>
-                  </div>
-                  <div className="audio-player">
-                    <div className="audio-card">
-                      <div className="audio-row">
-                        <div className="play-btn" onClick={() => {}}>▶</div>
-                        <div className="audio-info">
-                          <h3>Sound Waves</h3>
-                          <p>Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div className="waveform"></div>
-                        <div className="duration">0:00</div>
-                      </div>
-                      <div className="flex">
-                        <div className="progress">
-                          <input type="range" defaultValue="0" min="0" step="1" className="seek" />
-                        </div>
-                        <div className="actions">
-                          <span onClick={() => {}}><i className="fa fa-volume-up" aria-hidden="true"></i></span>
-                          <span onClick={() => {}}><i className="fa fa-heart" aria-hidden="true"></i> 303</span>
-                          <span onClick={() => {}}><i className="fa fa-download" aria-hidden="true"></i></span>
-                        </div>
-                      </div>
-                      <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-                    </div>
-                  </div>
+                  {audioData.map((audio, index) => (
+                    <AudioPlayer
+                      key={index}
+                      title={audio.title}
+                      description={audio.description}
+                      src={audio.src}
+                      index={index}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
