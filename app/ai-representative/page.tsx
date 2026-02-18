@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ClientScripts from "../components/ClientScripts";
+import AudioPlayer from "../components/AudioPlayer";
 import Image from "next/image";
+import "../components/AudioPlayer.css";
 
 const audioData = [
   {
@@ -19,152 +20,6 @@ const audioData = [
   }
 ];
 
-function AudioPlayer({ title, description, src, index }: { title: string; description: string; src: string; index: number }) {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
-  const [showVolumeSlider, setShowVolumeSlider] = useState(false);
-
-  const waveformBars = useMemo(() => {
-    const seed = index * 1000;
-    return Array.from({ length: 50 }, (_, i) => {
-      const h = ((seed + i * 37) % 100);
-      const d = ((seed + i * 17) % 50) / 100;
-      return { height: h, delay: d };
-    });
-  }, [index]);
-
-  useEffect(() => {
-    const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
-    if (!audio) return;
-
-    const handleLoadedMetadata = () => setDuration(audio.duration);
-    const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
-    const handleEnded = () => setIsPlaying(false);
-
-    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-    audio.addEventListener('timeupdate', handleTimeUpdate);
-    audio.addEventListener('ended', handleEnded);
-
-    return () => {
-      audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
-      audio.removeEventListener('timeupdate', handleTimeUpdate);
-      audio.removeEventListener('ended', handleEnded);
-    };
-  }, [index]);
-
-  const togglePlay = async () => {
-    const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
-    if (!audio) return;
-
-    document.querySelectorAll('audio').forEach((a, i) => {
-      if (i !== index && !a.paused) {
-        a.pause();
-      }
-    });
-
-    if (audio.paused) {
-      try {
-        await audio.play();
-        setIsPlaying(true);
-      } catch (error) {
-        console.log('Play error:', error);
-      }
-    } else {
-      audio.pause();
-      setIsPlaying(false);
-    }
-  };
-
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
-    if (audio) {
-      audio.currentTime = Number(e.target.value);
-      setCurrentTime(Number(e.target.value));
-    }
-  };
-
-  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
-    if (audio) {
-      const newVolume = Number(e.target.value);
-      audio.volume = newVolume;
-      setVolume(newVolume);
-    }
-  };
-
-  const formatTime = (time: number) => {
-    const m = Math.floor(time / 60);
-    const s = Math.floor(time % 60);
-    return `${m}:${s < 10 ? '0' + s : s}`;
-  };
-
-  return (
-    <div className="audio-player">
-      <div className="audio-card">
-        <div className="audio-row">
-          <div className="play-btn" onClick={togglePlay}>
-            {isPlaying ? '❚❚' : '▶'}
-          </div>
-          <div className="audio-info">
-            <h3>{title}</h3>
-            <p>{description}</p>
-          </div>
-          <div className={`waveform ${isPlaying ? 'playing' : ''}`}>
-            {waveformBars.map((bar, i) => (
-              <span key={i} style={{ height: `${bar.height}%`, animationDelay: `${bar.delay}s` }} />
-            ))}
-          </div>
-          <div className="duration">{formatTime(currentTime)}</div>
-        </div>
-        <div className="flex">
-          <div className="progress">
-            <input
-              type="range"
-              value={currentTime}
-              min="0"
-              max={duration || 0}
-              step="1"
-              className="seek"
-              onChange={handleSeek}
-            />
-          </div>
-          <div className="actions">
-            <span 
-              onMouseEnter={() => setShowVolumeSlider(true)}
-              onMouseLeave={() => setShowVolumeSlider(false)}
-              style={{ position: 'relative' }}
-            >
-              <i className={`fa fa-volume-${volume === 0 ? 'off' : volume < 0.5 ? 'down' : 'up'}`} aria-hidden="true"></i>
-              {showVolumeSlider && (
-                <input
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.1"
-                  value={volume}
-                  onChange={handleVolumeChange}
-                  style={{
-                    position: 'absolute',
-                    bottom: '100%',
-                    left: '50%',
-                    transform: 'translateX(-50%) rotate(-90deg)',
-                    transformOrigin: 'center',
-                    width: '80px',
-                    marginBottom: '30px'
-                  }}
-                />
-              )}
-            </span>
-          </div>
-        </div>
-        <audio id={`audio-${index}`} src={src}></audio>
-      </div>
-    </div>
-  );
-}
-
 export default function Solutions() {
   return (
     <>
@@ -176,7 +31,7 @@ export default function Solutions() {
               <h1>The AI Voice Representative Your Business Deserves.</h1>
               <p><strong>Never miss a call. Never miss an opportunity.</strong><br />A professional, multi-lingual phone representative that answers calls, manages inquiries, and books appointments 24/7. No hold music, no missed leads.</p>
               <div className="default_btn">
-                <a href="/contact">get started now</a>
+                <a href="https://app.oniva.app/" target="_blank">get started now</a>
               </div>
             </div>
           </div>

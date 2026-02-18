@@ -16138,7 +16138,7 @@ footer hr.white_line {
   left: 31px;
   content: "";
   background: url(../img/robot_talk.png) no-repeat;
-  width: 300px;
+  width: 240px;
   height: 100%;
   background-size: contain;
   animation: up-down 4s infinite linear;
@@ -16162,7 +16162,6 @@ footer hr.white_line {
   border: 2px solid rgba(120, 120, 255, 0.2);
   -o-border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
      border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
-  margin-bottom: 20px;
 }
 .audiowrap {
   /* Row Layout */
@@ -16204,7 +16203,6 @@ footer hr.white_line {
 .audiowrap .waveform {
   flex: 1;
   height: 40px;
-  background: linear-gradient(to right, #7b2ff7, #ffffff);
   opacity: 0.8;
   -webkit-mask: repeating-linear-gradient(90deg, #000 0px, #000 3px, transparent 3px, transparent 6px);
           mask: repeating-linear-gradient(90deg, #000 0px, #000 3px, transparent 3px, transparent 6px);

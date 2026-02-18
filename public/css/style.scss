@@ -2786,7 +2786,7 @@ footer {
             left: 31px;
             content: "";
             background: url(../img/robot_talk.png) no-repeat;
-            width:300px;
+            width:240px;
             height: 100%;
             background-size: contain;
              animation: up-down 4s infinite linear; 
@@ -2814,7 +2814,6 @@ footer {
         background:linear-gradient(145deg,#141a2e,#0c1020);
         border:2px solid rgba(120,120,255,0.2);
         border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
-        margin-bottom: 20px; 
     }
 
     /* Row Layout */
@@ -2852,7 +2851,6 @@ footer {
     .waveform{
         flex:1;
         height:40px;
-        background:linear-gradient(to right,#7b2ff7,#ffffff);
         opacity:0.8;
         mask: repeating-linear-gradient(
             90deg,

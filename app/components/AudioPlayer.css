@@ -1,0 +1,146 @@
+.audio-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.audio-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.play-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+}
+
+.audio-info {
+  flex-shrink: 0;
+  min-width: 150px;
+}
+
+.audio-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.audio-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 50px;
+  flex: 1;
+}
+
+.duration {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  min-width: 45px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progress {
+  flex: 1;
+}
+
+.progress input[type="range"] {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e0e0e0;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.progress input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+}
+
+.progress input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  border: none;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.actions span {
+  cursor: pointer;
+  color: #666;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.actions span:hover {
+  color: #667eea;
+}
+
+.actions i {
+  font-size: 18px;
+}
+
+.audiowrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .audio-row {
+    flex-wrap: wrap;
+  }
+  
+  .waveform {
+    width: 100%;
+    order: 3;
+  }
+  
+  .duration {
+    order: 2;
+  }
+}
