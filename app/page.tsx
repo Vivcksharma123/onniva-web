@@ -39,15 +39,13 @@ export default function Home() {
                   <h5>About Us</h5>
                   <h2>Who We Are</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla, ac sagittis sem ultrices vitae. Aliquam mi arcu, molestie non iaculis sit amet, maximus sed justo. In vehicula placerat risus, vitae ornare justo volutpat eu. Ut ornare enim vitae porttitor pharetra. In viverra non tellus congue venenatis.</p>
+                <p>Oniva is empowering businesses with intelligent conversational AI that understands customer needs and delivers instant, accurate responses. Built for small teams to enterprise brands, our mission is to make customer engagement effortless and efficient.</p>
+                <p>From AI-powered live chat to automated email response workflows, Oniva combines powerful machine learning with intuitive design to transform how you communicate with users.</p>
                 <ul>
-                  <li><a href="#"><Image src="/img/icon-1.png" alt="" width={30} height={30} />AI Representative</a></li>
-                  <li><Image src="/img/chat-ico.png" alt="" width={30} height={30} />AI Chatbot</li>
-                  <li><a href="#"><Image src="/img/email-ico.png" alt="" width={30} height={30} />AI Email Responder</a></li>
+                  <li><a href="/ai-representative"><Image src="/img/icon-1.png" alt="" width={30} height={30} />AI Representative</a></li>
+                  <li><a href="/ai-chatbot"><Image src="/img/chat-ico.png" alt="" width={30} height={30} />AI Chatbot</a></li>
+                  <li><a href="/ai-email-responder"><Image src="/img/email-ico.png" alt="" width={30} height={30} />AI Email Responder</a></li>
                 </ul>
-                <div className="default_btn">
-                  <a href="#">Read more</a>
-                </div>
               </div>
             </div>
           </div>
@@ -59,17 +57,18 @@ export default function Home() {
               <div className="col-md-12">
                 <div className="heading">
                   <h2>Our Solution</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla, ac sagittis sem ultrices vitae. Aliquam mi arcu, molestie non iaculis sit amet, maximus sed justo. In vehicula placerat risus, vitae ornare justo volutpat eu. Ut ornare enim vitae porttitor pharetra. In viverra non tellus congue venenatis.</p>
+                  <p>Oniva delivers seamless AI communication tools that adapt to your business style and customer expectations. Whether you’re converting website visitors or handling support emails, our AI works 24/7 to improve experience and outcomes.</p>
+                  <p>Every interaction becomes smarter over time, leveraging machine learning to refine answers, suggestions, and responses  reducing workload and increasing satisfaction.</p>
                 </div>
               </div>
               <div className="col-md-4 col-sm-12">
                 <div className="serv-box">
                   <div className="img">
-                    <Image src="/img/ai-ico.png" alt="AI" className="img-responsive" width={80} height={80} />
+                    <Image src="/img/ai-ico.png" alt="AI" className="img-responsive" width={50} height={50} />
                   </div>
                   <div className="text">
                     <h3>AI Representative</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla,</p>
+                    <p>Your AI-powered virtual agent that engages visitors, answers product questions, and guides users through funnels in real time.</p>
                     <div className="default_btn">
                       <a href="#">Read more</a>
                     </div>
@@ -79,11 +78,11 @@ export default function Home() {
               <div className="col-md-4 col-sm-12">
                 <div className="serv-box">
                   <div className="img">
-                    <Image src="/img/aiChatbot-ico.png" alt="Chatbot" className="img-responsive" width={80} height={80} />
+                    <Image src="/img/aiChatbot-ico.png" alt="Chatbot" className="img-responsive" width={50} height={50} />
                   </div>
                   <div className="text">
                     <h3>AI Chatbot</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla,</p>
+                    <p>Deploy a smart conversational assistant on your website or app that understands context and delivers helpful, human like responses.</p>
                     <div className="default_btn">
                       <a href="#">Read more</a>
                     </div>
@@ -93,11 +92,11 @@ export default function Home() {
               <div className="col-md-4 col-sm-12">
                 <div className="serv-box">
                   <div className="img">
-                    <Image src="/img/aiEmail-ico.png" alt="Email" className="img-responsive" width={80} height={80} />
+                    <Image src="/img/aiEmail-ico.png" alt="Email" className="img-responsive" width={50} height={50} />
                   </div>
                   <div className="text">
                     <h3>AI Email Responder</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla,</p>
+                    <p>Automate email replies with personalized, on brand responses that keep customers engaged without manual effort.</p>
                     <div className="default_btn">
                       <a href="#">Read more</a>
                     </div>
@@ -110,10 +109,10 @@ export default function Home() {
 
         <section className="ctaSec">
           <div className="sec-wrap">
-            <h2>Book a Demo</h2>
-            <p>Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.</p>
+            <h2>Ready to see Oniva in action?</h2>
+            <p>Our experts will help you tailor Oniva to your business needs and answer any questions in real time.</p>
             <div className="default_btn2">
-              <a href="#">get started now</a>
+              <a href="/contact">get started now</a>
             </div>
           </div>
           <svg width="100%" id="wave_svg" viewBox="0 10 500 5">
@@ -139,7 +138,7 @@ export default function Home() {
                 <div className="col-md-8">
                   <div className="heading">
                     <h2>Key Feature</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla, ac sagittis sem ultrices vitae.</p>
+                    <p>Explore Oniva’s core features, each designed to automate customer engagement with AI-powered chat, email, and virtual assistance.</p>
                   </div>
                 </div>
                 <div className="col-md-12">
@@ -153,8 +152,9 @@ export default function Home() {
                             </div>
                             <div className="text">
                               <h4>{num === 1 ? 'Phone Call Analytics' : num === 2 ? 'Case Summary' : 'Real-Time Case Transcripts'}</h4>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt tempor nulla,</p>
+                              <p>{num === 1 ? 'Oniva empowers teams with powerful call analytics to understand conversations beyond the words spoken. Track sentiment, call duration, keywords, and emerging conversation trends to gain actionable insights into communication performance.' : num === 2 ? 'Oniva provides live or near-real-time transcripts during active calls, allowing teams to follow conversations as they happen. This real-time visibility improves understanding, reduces miscommunication, and supports faster, more confident decision-making.' : 'Oniva automatically transforms long and complex conversations into concise, easy-to-read case summaries. Instead of reviewing full call recordings or lengthy transcripts, teams can quickly understand the context, outcomes, and next steps at a glance.'}</p>
                             </div>
+                            
                           </a>
                         </div>
                       </div>
@@ -178,10 +178,17 @@ export default function Home() {
                     {[1, 2, 3, 4].map((_, idx) => (
                       <div className="item" key={idx}>
                         <div className="testimonial-bx">
-                          <div className="rating"></div>
-                          <p>Lorem ipsum sit amet, consectetur adipisicing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ex ea commodo consequat. Duis aute irure dolor.</p>
-                          <h4>Lorem ipsum</h4>
+                          <div className="rating">
+                            <i className="fa fa-star" aria-hidden="true"></i>
+                            <i className="fa fa-star" aria-hidden="true"></i>
+                            <i className="fa fa-star" aria-hidden="true"></i>
+                            <i className="fa fa-star" aria-hidden="true"></i>
+                            <i className="fa fa-star" aria-hidden="true"></i>
+                          </div>
+                          <p>Oniva transformed our customer support. We cut response times in half and satisfaction jumped.</p>
+                          <h4>Support Manager, SaaS Company</h4>
                         </div>
+                        
                       </div>
                     ))}
                   </div>
@@ -197,10 +204,10 @@ export default function Home() {
               <div className="row">
                 <div className="col-md-8">
                   <div className="text">
-                    <h2>We&apos;re here to help</h2>
+                    <h2>We’re here to help</h2>
                     <h4>For any inquiries or to place an order, please contact us</h4>
                     <div className="default_btn">
-                      <a href="#">Contact us now</a>
+                      <a href="/contact">Contact us now</a>
                     </div>
                   </div>
                 </div>
@@ -214,14 +221,13 @@ export default function Home() {
                 <div className="col-md-8">
                   <div className="heading">
                     <h2>Frequently Asked Questions</h2>
-                    <p>Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem</p>
+                    <p>Find quick answers to common questions about Oniva’s AI tools, setup, and integrations.</p>
                   </div>
                   <div className="faq_main">
-                    {[1, 2, 3, 4, 5, 6].map((_, idx) => (
-                      <div className="faq_row" key={idx}>
+                      <div className="faq_row">
                         <div className="faq_question">
                           <div className="faq_question-text">
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                            <h3>Do I need coding skills to use Oniva?</h3>
                           </div>
                           <div className="icon">
                             <div className="icon-shape"></div>
@@ -229,11 +235,70 @@ export default function Home() {
                         </div>
                         <div className="answercont">
                           <div className="answer">
-                            <p>Sed luctus turpis suscipit nisi vestibulum, nec volutpat erat gravida. Nunc nibh nisl, dapibus sed aliquet et, venenatis ut mi. Nam id dui eu lorem vulputate imperdiet non non urna.</p>
+                            <p>No, Oniva's interface is intuitive and no code is required to launch AI assistants.</p>
                           </div>
                         </div>
                       </div>
-                    ))}
+                      <div className="faq_row">
+                        <div className="faq_question">
+                          <div className="faq_question-text">
+                            <h3>Can I customize the AI's tone and style?</h3>
+                          </div>
+                          <div className="icon">
+                            <div className="icon-shape"></div>
+                          </div>
+                        </div>
+                        <div className="answercont">
+                          <div className="answer">
+                            <p>Yes, you can tailor responses to match your brand voice and messaging.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="faq_row">
+                        <div className="faq_question">
+                          <div className="faq_question-text">
+                            <h3>What platforms does Oniva integrate with?</h3>
+                          </div>
+                          <div className="icon">
+                            <div className="icon-shape"></div>
+                          </div>
+                        </div>
+                        <div className="answercont">
+                          <div className="answer">
+                            <p>Oniva integrates with most CRM systems, email platforms, and website builders via API and plugins.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="faq_row">
+                        <div className="faq_question">
+                          <div className="faq_question-text">
+                            <h3>Is my data secure?</h3>
+                          </div>
+                          <div className="icon">
+                            <div className="icon-shape"></div>
+                          </div>
+                        </div>
+                        <div className="answercont">
+                          <div className="answer">
+                            <p>Yes, we follow industry best practices for data protection, encryption, and privacy compliance.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="faq_row">
+                        <div className="faq_question">
+                          <div className="faq_question-text">
+                            <h3>Is there customer support?</h3>
+                          </div>
+                          <div className="icon">
+                            <div className="icon-shape"></div>
+                          </div>
+                        </div>
+                        <div className="answercont">
+                          <div className="answer">
+                            <p>Absolutely, live support and onboarding help are available for all plans.</p>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                 </div>
               </div>

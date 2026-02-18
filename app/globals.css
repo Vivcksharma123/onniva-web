@@ -31,3 +31,19 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+/* Match footer container with header wrap */
+footer .container {
+  max-width: 1400px;
+}
+
+/* About Us section - align icons to left */
+.aboutUs-sec .text-wrap ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aboutUs-sec .text-wrap ul li img {
+  flex-shrink: 0;
+}

@@ -9,15 +9,9 @@ export default function Footer() {
           <div className="row">
             <div className="col-md-3 col-sm-23">
               <div className="foot_logo">
-                <Link href="#">
+                <Link href="/">
                   <Image src="/img/logo.png" alt="Logo" width={150} height={50} />
                 </Link>
-              </div>
-              <div className="social-icon">
-                <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i className="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
               </div>
             </div>
 
@@ -25,12 +19,12 @@ export default function Footer() {
               <div className="footer_menu">
                 <h4>Quick links</h4>
                 <ul>
-                  <li><Link href="#">Home</Link></li>
-                  <li><Link href="#">Features</Link></li>
-                  <li><Link href="#">Solutions</Link></li>
-                  <li><Link href="#">Use Cases</Link></li>
-                  <li><Link href="#">Recent News</Link></li>
-                  <li><Link href="#">Contact</Link></li>
+                  <li><Link href="/">Home</Link></li>
+                  <li><Link href="/features">Features</Link></li>
+                  <li><Link href="/industries">Industries</Link></li>
+                  <li><Link href="/use-case">Use Cases</Link></li>
+                  <li><Link href="#">Latest News</Link></li>
+                  <li><Link href="/contact">Contact</Link></li>
                 </ul>
               </div>
             </div>
@@ -49,9 +43,8 @@ export default function Footer() {
               <div className="dtl-box">
                 <h4>Get in Touch</h4>
                 <ul>
-                  <li><i className="fa fa-map-marker" aria-hidden="true"></i><a href="#">Lorem ipsum dolor<br /> Street 123, </a></li>
-                  <li><i className="fa fa-phone" aria-hidden="true"></i><a href="tel:+1 (555) 123-4567"> (XXX) XXX-XXX-1234</a></li>
-                  <li><i className="fa fa-envelope" aria-hidden="true"></i><a href="mailto:hello@grolinq.com">support@Oniva.app</a></li>
+                  <li><i className="fa fa-phone" aria-hidden="true"></i><a href="tel:+1123-231234">(+1) 123-123-1234</a></li>
+                  <li><i className="fa fa-envelope" aria-hidden="true"></i><a href="mailto:support@oniva.app">support@oniva.app</a></li>
                 </ul>
               </div>
             </div>
@@ -64,7 +57,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-md-12 col-sm-12">
               <div className="privacy_policy">
-                <p>© 2026 Oniva.app. All rights reserved.</p>
+                <p>© 2026 Oniva.app. All rights reserved. Powered by<a href="https://www.f5buddy.com/" target="_blank">F5 Buddy Pvt Ltd</a></p>
               </div>
             </div>
           </div>
