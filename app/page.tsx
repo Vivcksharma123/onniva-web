@@ -17,7 +17,7 @@ export default function Home() {
               </h1>
               <div><p>Automate responses, streamline support, and boost conversions with intelligent AI Call, chat and email assistants no coding required.</p></div>
               <div className="default_btn">
-                <a href="/contact">get started now</a>
+                <a href="https://app.oniva.app/" target="_blank">get started now</a>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
             <h2>Ready to see Oniva in action?</h2>
             <p>Our experts will help you tailor Oniva to your business needs and answer any questions in real time.</p>
             <div className="default_btn2">
-              <a href="/contact">get started now</a>
+              <a href="https://app.oniva.app/" target="_blank">get started now</a>
             </div>
           </div>
           <svg width="100%" id="wave_svg" viewBox="0 10 500 5">

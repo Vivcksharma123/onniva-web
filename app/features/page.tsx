@@ -54,7 +54,7 @@ export default function UseCase() {
 
 </p>
               <div className="default_btn">
-                <Link href="/contact">Get started now</Link>
+                <Link href="https://app.oniva.app/" target="_blank">Get started now</Link>
               </div>
             </div>
           </div>

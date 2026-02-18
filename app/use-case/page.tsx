@@ -28,7 +28,7 @@ export default function UseCase() {
               <h1>Use Case</h1>
               <p>Explore real use cases where Oniva streamlines processes, enhances engagement, and delivers results.</p>
               <div className="default_btn">
-                <a href="/contact">get started now</a>
+                <a href="https://app.oniva.app/" target="_blank">get started now</a>
               </div>
             </div>
           </div>

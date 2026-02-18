@@ -36,7 +36,7 @@ export default function PricingPage() {
             <h1>Simple, Transparent, Scalable.</h1>
             <p>One professional setup. Unlimited possibilities. Pay only for what you use.</p>
             <div className="default_btn">
-              <a href="/contact">get started now</a>
+              <a href="https://app.oniva.app/" target="_blank">get started now</a>
             </div>
           </div>
         </div>

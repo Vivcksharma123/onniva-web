@@ -137,7 +137,7 @@ export default function IndustriesPage() {
             <h1>Industries</h1>
             <p>Transforming industries with smart technology, tailored solutions, and measurable results from finance and healthcare to eCommerce and government.</p>
             <div className="default_btn">
-              <a href="/contact">get started now</a>
+              <a href="https://app.oniva.app/" target="_blank">get started now</a>
             </div>
           </div>
         </div>
