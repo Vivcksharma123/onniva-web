@@ -986,6 +986,9 @@ header {
             h3{
                 margin: 0 0 20px;
             }
+            p{
+                min-height: 120px;
+            }
           
         }
 
@@ -2215,7 +2218,7 @@ footer {
             min-height: 40px;
         }
         p{
-         min-height: 70px;   
+         min-height: 150px;   
         }
     }
 }

@@ -8,14 +8,14 @@ import Image from "next/image";
 
 const audioData = [
   {
-    title: 'Sound Waves',
-    description: 'Lorem ipsum dolor sit amet',
-    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
+    title: 'Happy Customer',
+    description: 'Our voice recording system is amazing',
+    src: 'https://storage.vapi.ai/019bc771-4d9b-7559-bcb6-21e65f65ca30-1768577782412-0a1d0232-cf35-4a76-a0c2-bded367142a7-mono.wav'
   },
   {
-    title: 'Sound Waves',
-    description: 'Lorem ipsum dolor sit amet',
-    src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
+    title: 'Happy Customer',
+    description: 'Our voice recording system is amazing',
+    src: 'https://storage.vapi.ai/019c42fd-7ee8-766c-bb87-632e3f7ba96d-1770650627841-09fe4c43-2a81-46ac-82f2-e7e1e3fa709b-mono.wav'
   }
 ];
 
@@ -24,16 +24,16 @@ function AudioPlayer({ title, description, src, index }: { title: string; descri
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
-  const [liked, setLiked] = useState(false);
-  const [likes, setLikes] = useState(303);
+  const [showVolumeSlider, setShowVolumeSlider] = useState(false);
 
-  const waveformBars = useMemo(() => 
-    Array.from({ length: 50 }, () => ({
-      height: Math.random() * 100,
-      delay: Math.random() * 0.5
-    })),
-    []
-  );
+  const waveformBars = useMemo(() => {
+    const seed = index * 1000;
+    return Array.from({ length: 50 }, (_, i) => {
+      const h = ((seed + i * 37) % 100);
+      const d = ((seed + i * 17) % 50) / 100;
+      return { height: h, delay: d };
+    });
+  }, [index]);
 
   useEffect(() => {
     const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
@@ -85,18 +85,13 @@ function AudioPlayer({ title, description, src, index }: { title: string; descri
     }
   };
 
-  const handleVolumeToggle = () => {
+  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const audio = document.querySelector(`#audio-${index}`) as HTMLAudioElement;
     if (audio) {
-      const newVolume = audio.volume > 0 ? 0 : 1;
+      const newVolume = Number(e.target.value);
       audio.volume = newVolume;
       setVolume(newVolume);
     }
-  };
-
-  const handleLike = () => {
-    setLiked(!liked);
-    setLikes(liked ? likes - 1 : likes + 1);
   };
 
   const formatTime = (time: number) => {
@@ -136,14 +131,31 @@ function AudioPlayer({ title, description, src, index }: { title: string; descri
             />
           </div>
           <div className="actions">
-            <span onClick={handleVolumeToggle}>
-              <i className={`fa fa-volume-${volume > 0 ? 'up' : 'off'}`} aria-hidden="true"></i>
-            </span>
-            <span onClick={handleLike} style={{ color: liked ? '#e91e63' : 'inherit', cursor: 'pointer' }}>
-              <i className={`fa fa-heart${liked ? '' : '-o'}`} aria-hidden="true"></i> {likes}
-            </span>
-            <span>
-              <i className="fa fa-download" aria-hidden="true"></i>
+            <span 
+              onMouseEnter={() => setShowVolumeSlider(true)}
+              onMouseLeave={() => setShowVolumeSlider(false)}
+              style={{ position: 'relative' }}
+            >
+              <i className={`fa fa-volume-${volume === 0 ? 'off' : volume < 0.5 ? 'down' : 'up'}`} aria-hidden="true"></i>
+              {showVolumeSlider && (
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value={volume}
+                  onChange={handleVolumeChange}
+                  style={{
+                    position: 'absolute',
+                    bottom: '100%',
+                    left: '50%',
+                    transform: 'translateX(-50%) rotate(-90deg)',
+                    transformOrigin: 'center',
+                    width: '80px',
+                    marginBottom: '30px'
+                  }}
+                />
+              )}
             </span>
           </div>
         </div>

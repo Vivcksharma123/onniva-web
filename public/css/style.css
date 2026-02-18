@@ -14531,6 +14531,9 @@ header .main_header .wrap .rightHeader .top_head a i {
 .serv-sec .serv-box .text h3 {
   margin: 0 0 20px;
 }
+.serv-sec .serv-box .text p {
+  min-height: 120px;
+}
 
 .sec_group {
   position: relative;
@@ -15619,7 +15622,7 @@ footer hr.white_line {
   min-height: 40px;
 }
 .cases-sec .serv-box p {
-  min-height: 70px;
+  min-height: 150px;
 }
 
 /*---------------solutionIntro-sec-----------*/

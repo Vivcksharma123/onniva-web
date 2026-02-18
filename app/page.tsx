@@ -70,7 +70,7 @@ export default function Home() {
                     <h3>AI Representative</h3>
                     <p>Your AI-powered virtual agent that engages visitors, answers product questions, and guides users through funnels in real time.</p>
                     <div className="default_btn">
-                      <a href="#">Read more</a>
+                      <a href="/ai-representative">Read more</a>
                     </div>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Home() {
                     <h3>AI Chatbot</h3>
                     <p>Deploy a smart conversational assistant on your website or app that understands context and delivers helpful, human like responses.</p>
                     <div className="default_btn">
-                      <a href="#">Read more</a>
+                      <a href="/ai-chatbot">Read more</a>
                     </div>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ export default function Home() {
                     <h3>AI Email Responder</h3>
                     <p>Automate email replies with personalized, on brand responses that keep customers engaged without manual effort.</p>
                     <div className="default_btn">
-                      <a href="#">Read more</a>
+                      <a href="/ai-email-responder">Read more</a>
                     </div>
                   </div>
                 </div>
