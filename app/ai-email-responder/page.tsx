@@ -1,12 +1,14 @@
-'use client';
-
-import { useEffect, useState, useMemo } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ClientScripts from "../components/ClientScripts";
 import Image from "next/image";
 
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI Email Responder - Automate Email Replies Instantly | Oniva',
+  description: 'Automate email responses with intelligent AI that understands intent, replies instantly, and keeps your communication consistent and professional. 24/7 email handling with personalized replies.',
+};
 
 export default function AIemail() {
   return (

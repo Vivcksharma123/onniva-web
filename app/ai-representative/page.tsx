@@ -1,11 +1,15 @@
-'use client';
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ClientScripts from "../components/ClientScripts";
 import AudioPlayer from "../components/AudioPlayer";
 import Image from "next/image";
 import "../components/AudioPlayer.css";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Representative - 24/7 Intelligent Virtual Agent | Oniva',
+  description: 'Deploy an AI Representative that handles customer interactions, automates communications, and supports your team around the clock. Multilingual, real-time transcription, and instant notifications.',
+};
 
 const audioData = [
   {

@@ -1,10 +1,16 @@
-'use client';
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ClientScripts from "../components/ClientScripts";
 import Image from "next/image";
 import Link from "next/link";
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Features - AI-Powered Communication Tools | Oniva',
+  description: 'Explore Oniva\'s powerful features including AI chatbot, email automation, voice representatives, real-time analytics, and seamless integrations. Transform your customer engagement with intelligent AI tools.',
+};
+
 
 export default function UseCase() {
   const useCases = [

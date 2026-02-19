@@ -254,7 +254,10 @@ body {
         color: $white;
         margin: 0 0 30px;
         a{
-            color: $color-blue;
+            color: $color-neon;
+            &:hover{
+                color: $color-blue;
+            }
         }
     }
 

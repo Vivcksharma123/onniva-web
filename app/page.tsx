@@ -4,6 +4,14 @@ import ClientScripts from "./components/ClientScripts";
 import Image from "next/image";
 import Link from "next/link";
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Oniva - AI-Driven Call, Chat & Email Automation for Smarter Customer Engagement',
+  description: 'Automate responses, streamline support, and boost conversions with intelligent AI Call, chat and email assistants. No coding required. Transform customer engagement with Oniva.',
+};
+
+
 export default function Home() {
   return (
     <>

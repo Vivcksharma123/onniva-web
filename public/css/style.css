@@ -13894,6 +13894,9 @@ body p {
   margin: 0 0 30px;
 }
 body p a {
+  color: #22d3ee;
+}
+body p a:hover {
   color: #7c3aed;
 }
 
