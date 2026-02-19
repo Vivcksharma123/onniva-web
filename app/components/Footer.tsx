@@ -34,8 +34,8 @@ export default function Footer() {
               <div className="footer_menu">
                 <h4>Useful Links</h4>
                 <ul>
-                  <li><Link href="#">Privacy Policy</Link></li>
-                  <li><Link href="#">Terms of Usase</Link></li>
+                  <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                  <li><Link href="/terms-of-uses">Terms of Uses</Link></li>
                 </ul>
               </div>
             </div>
