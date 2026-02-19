@@ -14186,6 +14186,9 @@ header .main_header .wrap .rightHeader .top_head a i {
 .mainmenu > ul > li {
   margin-right: 0px;
 }
+.mainmenu > ul > li.active a {
+  color: #22d3ee !important;
+}
 .mainmenu > ul > li:last-child {
   margin-right: 0;
 }
@@ -14227,6 +14230,7 @@ header .main_header .wrap .rightHeader .top_head a i {
   border-width: 4px;
   margin-left: 7px !important;
   top: -3px;
+  border-bottom: 0;
   position: relative;
 }
 
@@ -16207,8 +16211,13 @@ footer hr.white_line {
   flex: 1;
   height: 40px;
   opacity: 0.8;
+  margin-left: 20px;
+  justify-content: space-between;
   -webkit-mask: repeating-linear-gradient(90deg, #000 0px, #000 3px, transparent 3px, transparent 6px);
           mask: repeating-linear-gradient(90deg, #000 0px, #000 3px, transparent 3px, transparent 6px);
+}
+.audiowrap .waveform div {
+  width: 5px !important;
 }
 .audiowrap {
   /* Duration */
@@ -16534,6 +16543,19 @@ footer hr.white_line {
   .solutionIntro-sec .slider-wrap .text .text-wrap {
     width: 90%;
   }
+  .Process-sec .Process-box .text {
+    background-size: 200% 200%;
+    min-height: 319px;
+  }
+  .letsTalk .audiowrap:after {
+    display: none;
+  }
+  .letsTalk .audiowrap .audio-card {
+    width: 100%;
+  }
+  .letsTalk .audiowrap .audio-row {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 991px) {
   body h2 {
@@ -16749,6 +16771,22 @@ footer hr.white_line {
   }
   .calculator-sec .txt-box:first-child {
     margin: 0 0 20px;
+  }
+  .letsTalk .audiowrap:after {
+    display: none;
+  }
+  .letsTalk .audiowrap .audio-card {
+    width: 100%;
+  }
+  .letsTalk .audiowrap .audio-row {
+    flex-wrap: wrap;
+  }
+  .letsTalk .audiowrap .audio-row .waveform {
+    margin-left: 0 !important;
+    justify-content: space-between;
+  }
+  .letsTalk .audiowrap .audio-row .waveform div {
+    width: 11px !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -17129,6 +17167,15 @@ footer hr.white_line {
   }
   .calculator-sec .form-box .total h5 {
     margin: 0 0 10px;
+  }
+  .audiowrap .audio-info {
+    text-align: center;
+  }
+  .audiowrap .audio-info h3 {
+    font-size: 18px;
+  }
+  .audiowrap .duration {
+    text-align: left;
   }
 }
 @media screen and (max-width: 480px) {
