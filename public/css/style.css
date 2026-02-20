@@ -15483,6 +15483,7 @@ footer hr.white_line {
 }
 .contactDtl-sec .wrap .sec-row .text-box h4 a {
   color: #fff;
+  text-transform: lowercase;
 }
 
 .blog_page .blog-content {

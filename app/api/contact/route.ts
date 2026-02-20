@@ -24,7 +24,7 @@ export async function POST(request: Request) {
 
     await transporter.sendMail({
       from: `"Contact Us" <${process.env.SMTP_USER}>`,
-      to: 'vivek.sharma@f5buddy.com',
+      to: process.env.EMAIL_TO,
       replyTo: body.email,
       subject: `Contact Form: ${body.subject || 'New Inquiry'}`,
       text: `
@@ -34,7 +34,16 @@ Email: ${body.email}
 
 Message:
 ${body.message}
-      `,
+  `,
+  html: `
+    <h3>New Contact Form Submission</h3>
+    <p><strong>Name:</strong> ${body.name}</p>
+    <p><strong>Phone:</strong> ${body.phone || 'Not provided'}</p>
+    <p><strong>Email:</strong> ${body.email}</p>
+    <p><strong>Subject:</strong> ${body.subject || 'New Inquiry'}</p>
+    <p><strong>Message:</strong></p>
+    <p>${body.message}</p>
+  `,
     });
 
     return NextResponse.json({ success: true });
