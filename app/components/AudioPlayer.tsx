@@ -132,7 +132,6 @@ export default function AudioPlayer({ title, description, src, index }: AudioPla
               />
             ))}
           </div>
-          <div className="duration">{formatTime(currentTime)}</div>
         </div>
         <div className="flex">
           <div className="progress">
@@ -150,6 +149,8 @@ export default function AudioPlayer({ title, description, src, index }: AudioPla
             />
           </div>
           <div className="actions">
+
+          <div className="duration">{formatTime(currentTime)}</div>
             <span 
               onMouseEnter={() => setShowVolumeSlider(true)}
               onMouseLeave={() => setShowVolumeSlider(false)}
