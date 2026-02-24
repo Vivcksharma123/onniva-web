@@ -5,11 +5,17 @@ import AudioPlayer from "../components/AudioPlayer";
 import Image from "next/image";
 import "../components/AudioPlayer.css";
 import type { Metadata } from 'next';
+import AudioAnalyzer from "../components/AudioAnalyzer";
 
 export const metadata: Metadata = {
   title: 'AI Representative - 24/7 Intelligent Virtual Agent | Oniva',
   description: 'Deploy an AI Representative that handles customer interactions, automates communications, and supports your team around the clock. Multilingual, real-time transcription, and instant notifications.',
 };
+
+
+
+
+
 
 const audioData = [
   {
@@ -168,6 +174,7 @@ export default function Solutions() {
             </div>
           </div>
         </section>
+        
         <section className="letsTalk">
           <div className="container">
             <div className="row">
@@ -181,6 +188,7 @@ export default function Solutions() {
                       src={audio.src}
                       index={index}
                     />
+                    
                   ))}
                 </div>
               </div>

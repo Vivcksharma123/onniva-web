@@ -668,6 +668,9 @@ header {
                 &:hover{
                     color: $color-blue;
                 }
+                &.active{
+                    color: $color-neon;
+                }
             }
         }
     }

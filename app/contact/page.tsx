@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ClientScripts from "../components/ClientScripts";
 import { useState } from "react";
+import InquiryForm from "../components/InquiryForm";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -85,7 +86,7 @@ export default function Contact() {
                       you can reach out via the contact details below:
                     </p>
 
-                    <div className="inquiries_form">
+                    {/* <div className="inquiries_form">
                       <form onSubmit={handleSubmit}>
                         <div className="row">
                           <div className="col-sm-6">
@@ -192,7 +193,8 @@ export default function Contact() {
                           </div>
                         </div>
                       </form>
-                    </div>
+                    </div> */}
+                    <InquiryForm />
                   </div>
 
                   <div className="map">
