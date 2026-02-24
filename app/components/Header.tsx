@@ -28,17 +28,23 @@ export default function Header() {
               <ul>
                 <li className={pathname === '/' ? 'active' : ''}><Link href="/">Home</Link></li>
                 <li className={pathname === '/features' ? 'active' : ''}><Link href="/features">Features</Link></li>
-                <li className={pathname.startsWith('/ai-') ? 'active' : ''}>
-                  <Link href="#">Solutions</Link>
+                <li>
+                  <Link href="#" style={pathname.startsWith('/ai-') ? {color: '#22d3ee'} : {}}>Solutions</Link>
                   <ul>
-                    <li><Link href="/ai-representative">AI Representative</Link></li>
-                    <li><Link href="/ai-chatbot">AI Chatbot</Link></li>
-                    <li><Link href="/ai-email-responder">AI Email Responder</Link></li>
+                    <li>
+                      <Link href="/ai-representative" className={pathname === '/ai-representative' ? 'active' : ''}>AI Representative</Link>
+                    </li>
+                    <li>
+                      <Link href="/ai-chatbot" className={pathname === '/ai-chatbot' ? 'active' : ''}>AI Chatbot</Link>
+                    </li>
+                    <li>
+                      <Link href="/ai-email-responder" className={pathname === '/ai-email-responder' ? 'active' : ''}>AI Email Responder</Link>
+                    </li>
                   </ul>
                 </li>
                 <li className={pathname === '/use-case' ? 'active' : ''}><Link href="/use-case">Use Cases</Link></li>
                 <li className={pathname === '/industries' ? 'active' : ''}><Link href="/industries">Industries</Link></li>
-                <li><Link href="#">Recent News</Link></li>
+                <li><Link href="https://mywebprovider.com/oniva/">Latest News</Link></li>
                 <li className={pathname === '/contact' ? 'active' : ''}><Link href="/contact">Contact</Link></li>
                 <li className="login_btn"><Link href="https://app.oniva.app/" target="_blank">Get Started</Link></li>
               </ul>

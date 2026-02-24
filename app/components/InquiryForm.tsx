@@ -1,0 +1,183 @@
+'use client';
+
+import React, { useState } from "react";
+import "./InquiryForm.css"; // CSS file (below)
+
+export default function InquiryForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState<Record<string, boolean>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+
+  const validateForm = () => {
+    const newErrors: Record<string, boolean> = {};
+
+    if (!formData.name.trim()) newErrors.name = true;
+    if (!formData.phone.trim()) newErrors.phone = true;
+    if (!formData.email.trim()) newErrors.email = true;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (formData.email && !emailRegex.test(formData.email)) {
+      newErrors.email = true;
+    }
+
+    if (formData.phone && formData.phone.length < 10) {
+      setPhoneError("Phone must be at least 10 digits");
+      setTimeout(() => setPhoneError(""), 5000);
+      newErrors.phone = true;
+    } else {
+      setPhoneError("");
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+
+    if (!validateForm()) return;
+
+    try {
+      setStatus("sending");
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      setStatus("success");
+
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
+      setErrors({});
+      setSubmitted(false);
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
+  return (
+    <>
+      {phoneError && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: '#dc3545',
+          color: 'white',
+          padding: '15px',
+          textAlign: 'center',
+          zIndex: 99999,
+          fontWeight: '500',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
+        }}>
+          {phoneError}
+        </div>
+      )}
+      <div className="inquiries_form">
+        <form onSubmit={handleSubmit} noValidate>
+          <div className="row">
+            <div className="col-sm-6">
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className={`form-control ${submitted && errors.name ? "input-error" : ""}`}
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                />
+              </div>
+            </div>
+
+            <div className="col-sm-6">
+              <div className="form-group">
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className={`form-control ${submitted && errors.phone ? "input-error" : ""}`}
+                  value={formData.phone}
+                  onChange={(e) => {
+                    const value = e.target.value.replace(/\D/g, "");
+                    setFormData({ ...formData, phone: value });
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className="col-sm-12">
+              <div className="form-group">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className={`form-control ${submitted && errors.email ? "input-error" : ""}`}
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
+              </div>
+            </div>
+
+            <div className="col-sm-12">
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                />
+              </div>
+            </div>
+
+            <div className="col-sm-12">
+              <div className="form-group">
+                <textarea
+                  rows={5}
+                  placeholder="Message"
+                  className="form-control"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                />
+              </div>
+            </div>
+
+            <div className="col-sm-12 text-left">
+              <div className="form-group">
+                <button
+                  type="submit"
+                  className="blue_btn"
+                  disabled={status === "sending"}
+                >
+                  {status === "sending" ? "Sending..." : "Submit Your Inquiry"}
+                </button>
+
+                {status === "success" && (
+                  <p style={{ color: 'green', marginTop: '10px' }}>
+                    Message sent successfully!
+                  </p>
+                )}
+
+                {status === "error" && (
+                  <p style={{ color: 'red', marginTop: '10px' }}>
+                    Failed to send message. Please try again.
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </>
+  );
+}

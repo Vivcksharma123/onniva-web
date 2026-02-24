@@ -41,5 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 # Large GIF files
-public/img/graphic-1.gif
-public/img/graphic-2.gif
+public/img/graphic-10.gif
+public/img/graphic-20.gif

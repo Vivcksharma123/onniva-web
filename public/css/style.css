@@ -14265,6 +14265,9 @@ header .main_header .wrap .rightHeader .top_head a i {
 .mainmenu.desktop li.has-sub li a:hover {
   color: #7c3aed;
 }
+.mainmenu.desktop li.has-sub li a.active {
+  color: #22d3ee;
+}
 
 .mainmenu ul ul {
   width: 280px;
