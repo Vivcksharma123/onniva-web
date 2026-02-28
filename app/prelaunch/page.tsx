@@ -12,7 +12,8 @@ export default function PrelaunchPage() {
 
   useEffect(() => {
     // Static Launch Date: 28 Feb 2026, 4:00 PM
-    const launchDate = new Date(2026, 1, 28, 16, 0, 0).getTime();
+  
+      const launchDate = new Date(2026, 2, 1, 9, 0, 0).getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
