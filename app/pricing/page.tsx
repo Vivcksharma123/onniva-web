@@ -15,8 +15,8 @@ export default function PricingPage() {
 
   const calculateCredits = () => {
     const voiceCredits = voiceMins * 60;
-    const emailCredits = emailQty * 10000;
-    const chatCredits = chatQty * 5000;
+    const emailCredits = emailQty * 6000;
+    const chatCredits = chatQty * 6000;
     const total = voiceCredits + emailCredits + chatCredits;
     const cost = (total / 2000) * 10;
     setTotalCredits(total);
@@ -135,7 +135,7 @@ export default function PricingPage() {
                   <div className="form-box">
                     <div className="lebel">
                       <label>No. of chatbots?</label>
-                      <p><span>5,000</span> credits</p>
+                      <p><span>6,000</span> credits</p>
                     </div>
                     <input 
                       type="number" 
@@ -151,7 +151,7 @@ export default function PricingPage() {
                   <div className="form-box">
                     <div className="lebel">
                       <label>No. of AI Emails?</label>
-                      <p><span>10,000</span> credits</p>
+                      <p><span>6,000</span> credits</p>
                     </div>
                     <input 
                       type="number" 
@@ -271,7 +271,7 @@ export default function PricingPage() {
             <h2>Start Your Professional AI Transformation Today.</h2>
             <p>Volume discounts available for Enterprise clients requiring over 1,000,000 credits per month.</p>
             <div className="default_btn2">
-              <a href="/contact">Get Started - $399 Setup</a>
+              <a href="/contact">Signup Now</a>
             </div>
           </div>
           <svg width="100%" id="wave_svg" viewBox="0 10 500 5">

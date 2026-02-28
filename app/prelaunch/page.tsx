@@ -6,8 +6,16 @@ export default function PrelaunchPage() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const now = new Date();
-    const launchDate = new Date(now.getTime() + (18 * 60 * 60 * 1000)).getTime();
+    let launchDate: number;
+    
+    const stored = localStorage.getItem('launchDate');
+    if (stored) {
+      launchDate = parseInt(stored);
+    } else {
+      const now = new Date();
+      launchDate = new Date(now.getTime() + (18 * 60 * 60 * 1000)).getTime();
+      localStorage.setItem('launchDate', launchDate.toString());
+    }
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
