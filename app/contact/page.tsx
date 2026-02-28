@@ -214,47 +214,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="contactDtl-sec">
-          <div className="wrap">
-            <div className="sec-row">
-              <div className="text-box">
-                <div className="offer">
-                  <i className="fa fa-envelope" aria-hidden="true"></i>
-                </div>
-                <h4>
-                  <a href="mailto:support@oniva.app">support@oniva.app</a>
-                </h4>
-              </div>
-
-              <div className="text-box">
-                <div className="offer">
-                  <i className="fa fa-phone" aria-hidden="true"></i>
-                </div>
-                <h4>
-                  <a href="tel:+11231231234">(+1) 123-123-1234</a>
-                </h4>
-              </div>
-
-              <div className="text-box">
-                <div className="offer">
-                  <i className="fa fa-clock" aria-hidden="true"></i>
-                </div>
-                <h4>
-                  Mon - Fri : 08AM - 10PM <br /> Sat - Sun : Closed
-                </h4>
-              </div>
-
-              <div className="text-box">
-                <div className="offer">
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                </div>
-                <h4>
-                  Lorem ipsum dolor <br /> Street 123
-                </h4>
-              </div>
-            </div>
-          </div>
-        </section>
+      
       </main>
 
       <Footer />

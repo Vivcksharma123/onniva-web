@@ -1,222 +1,90 @@
-'use client';
-
-import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ClientScripts from '../components/ClientScripts';
-
-const tabData = [
-  {
-    id: 'firstTab',
-    label: 'Financial services',
-    icon: '/img/financ-ico.png',
-    img: '/img/financial-img.jpg',
-    content: (
-      <>
-        <div className="img-box">
-          <img src="/img/financial-img.jpg" className="img-responsive" alt="Financial services" />
-        </div>
-        <p>Banks, insurance providers, wealth managers, and fintech firms trust Oniva for secure, scalable solutions.</p>
-        <p><strong>What we help with:</strong></p>
-        <ul>
-          <li>Digital banking and payment modernisation</li>
-          <li>Fraud detection &amp; risk analytics</li>
-          <li>Regulatory compliance automation</li>
-          <li>Customer experience acceleration</li>
-        </ul>
-        <p><strong>Outcomes:</strong> increased security, reduced operational costs, faster service delivery.</p>
-      </>
-    ),
-  },
-  {
-    id: 'secondTab',
-    label: 'Healthcare',
-    icon: '/img/healthcare-ico.png',
-    img: '/img/financial-img.jpg',
-    content: (
-      <>
-        <p>We support hospitals, clinics, labs, and healthtech companies to improve patient care and streamline operations.</p>
-        <p><strong>What we help with:</strong></p>
-        <ul>
-        <li>Telehealth system integration</li>
-        <li>Electronic Health Record (EHR) optimization</li>
-        <li>AI‑enabled diagnostics and analytics</li>
-        <li>Secure patient data workflows</li>
-        </ul>
-        <p><strong>Outcomes:</strong> safer, faster care with reduced administrative burden.</p>
-      </>
-    ),
-  },
-  {
-    id: 'thirdTab',
-    label: 'Manufacturing and Logistics',
-    icon: '/img/manufactor-ico.png',
-    img: '/img/financial-img.jpg',
-    content: (
-      <>
-        <p>Oniva enables smarter factories and supply chains with real‑time insights and automation.</p>
-        <p><strong>What we help with:</strong></p>
-        <ul>
-          <li>IoT‑powered operational monitoring</li>
-          <li>Predictive maintenance</li>
-          <li>Inventory automation</li>
-          <li>Logistics route planning &amp; optimization</li>
-        </ul>
-        <p><strong>Outcomes:</strong> increased throughput, lower downtime, and improved supply reliability.</p>
-      </>
-    ),
-  },
-  {
-    id: 'fourTab',
-    label: 'eCommerce',
-    icon: '/img/eCommerce.png',
-    content: (
-      <>
-        <p>From online stores to multichannel marketplaces, we enhance how retailers engage customers.</p>
-        <p><strong>What we help with:</strong></p>
-        <ul>
-          <li>Custom storefront platforms</li>
-          <li>Personalization engines</li>
-          <li>Integrated POS and fulfillment systems</li>
-          <li>Data‑driven customer insights</li>
-        </ul>
-        <p><strong>Outcomes:</strong> higher conversions, loyalty growth, and seamless shopping experiences.</p>
-      </>
-    ),
-  },
-  {
-    id: 'fiveTab',
-    label: 'Government',
-    icon: '/img/govt-ico.png',
-    content: (
-      <>
-        <p>Secure, scalable solutions for government agencies and public programs.</p>
-        <p><strong>What we help with:</strong></p>
-        <ul>
-          <li>Citizen services portals</li>
-          <li>Digital identity and access management</li>
-          <li>Data analytics for public safety</li>
-          <li>Infrastructure modernization</li>
-        </ul>
-        <p><strong>Outcomes:</strong> better public access, faster service delivery, and improved transparency.</p>
-      </>
-    ),
-  },
-  {
-    id: 'sixTab',
-    label: 'Defense and Intelligence',
-    icon: '/img/d-i-ico.png',
-    content: (
-      <>
-        <p>Robust technology solutions built for security, performance, and compliance.</p>
-        <p><strong>What we help with:</strong></p>
-        <ul>
-          <li>Secure data management</li>
-          <li>Mission‑critical systems</li>
-          <li>Real‑time decision platforms</li>
-          <li>AI analytics and surveillance support</li>
-        </ul>
-        <p><strong>Outcomes:</strong> heightened situational awareness and mission readiness.</p>
-      </>
-    ),
-  },
-];
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import ClientScripts from "../components/ClientScripts";
+import Image from "next/image";
+import Link from "next/link";
 
 
-export default function IndustriesPage() {
-  const [activeTab, setActiveTab] = useState(tabData[0].id);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+export default function UseCase() {
+  const useCases = [
+    {
+      title: "Home Services (Plumbing, HVAC, & Electrical)",
+      icon: "HomeServices.png",
+      description: "For plumbing companies, electricians, HVAC specialists, and roofing contractors, our AI Voice Representative serves as a 24/7 digital dispatcher that ensures no service call ever goes unanswered. By expertly qualifying job urgency, providing instant quotes, and booking site visits directly into your team's calendar, the system eliminates the 20% revenue loss typical of missed calls in the trades. This shift from playing phone tag to automated intake allows your technicians to remain focused on the tools while your business continues to capture high-value leads and emergency repair requests at any hour of the day or night.",
+    },
+    {
+      title: "Real Estate & Property Management",
+      icon: "Real-Estatepng.png",
+      description: "Our AI solution empowers residential agencies, property managers, and commercial leasing firms to maintain a competitive edge through instantaneous lead engagement. By handling property feature inquiries, rental qualification screening, and automated viewing tours, the system dramatically reduces the response time that often dictates a closed deal. In an industry where speed is the primary currency, our AI Representative ensures that every prospective buyer or tenant receives immediate, professional attention, resulting in a 70% increase in scheduled showings and a significant reduction in manual administrative overhead. ",
+    },
+    {
+      title: "Legal & Financial Services",
+      icon: "Legal-Financial.png",
+      description: "Designed for the high-trust environments of law firms, accounting practices, and insurance brokers, our AI Representative acts as a sophisticated first point of contact for client intake. The system meticulously manages initial lead screening, conflict of interest checks, and consultation scheduling, ensuring that your senior partners only spend time on pre-qualified, high-value cases. By automating the data-heavy intake process, firms can significantly lower their cost-per-acquisition while providing potential clients with the immediate, professional responsiveness expected in the legal and financial sectors. ",
+    },
+    {
+      title: "Automotive Dealerships & Service Centers",
+      icon: "AutomotiveDealerships.png",
+      description: "For car dealerships, independent repair shops, and rental agencies, our AI Voice System optimizes the service bay by automating high-volume routine coordination. The AI seamlessly manages oil change and tire rotation bookings, service status updates, and test drive scheduling, allowing your service advisors to focus on complex diagnostics and customer consultations. This operational efficiency maximizes your daily throughput and ensures that routine maintenance inquiries are handled with mechanical precision, directly increasing your service center's monthly revenue and customer satisfaction scores.",
+    },
+    {
+      title: "Hospitality & Event Venues",
+      icon: "Hospitality-01.png",
+      description: "Our AI Representative allows fine dining restaurants, boutique hotels, and event venues to provide 5-star service before the guest even walks through the door. By flawlessly managing table reservations, dietary inquiries, and event space availability, the system removes the burden of phone management from your floor staff during peak hours. This ensures that your team can stay present with the guests in the room, while the AI captures every incoming reservation and inquiry with the same level of hospitality and brand-perfect tone your establishment is known for.",
+    },
+    
+  ];
 
   return (
     <>
       <Header />
 
-      <div className="inner-banner">
-        <div className="slider-wrap">
-          <div className="text">
-            <h1>Industries</h1>
-            <p>Transforming industries with smart technology, tailored solutions, and measurable results from finance and healthcare to eCommerce and government.</p>
-            <div className="default_btn">
-              <a href="https://app.oniva.app/" target="_blank">get started now</a>
-            </div>
-          </div>
-        </div>
-        <canvas id="canvas"></canvas>
-      </div>
-
-      <section className="indsIntro">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="sec-wrap">
-                <div className="leftPart">
-                  <div className="img-box">
-                    <img src="/img/industries-img-1.jpg" className="img-responsive" alt="Industries" />
-                  </div>
-                  <div className="numbox">
-                    <h2>12 <span>k</span></h2>
-                    <p>Projects Done</p>
-                  </div>
-                </div>
-                <div className="rightPart">
-                  <p>At Oniva, we empower organizations across industries to leverage smart technology, enhance efficiency, and deliver better outcomes. Whether you’re a growing startup or a global enterprise, our tailored solutions meet your unique challenges — driving growth, improving operations, and fueling innovation.</p>
-                </div>
+      <main>
+        {/* Banner */}
+        <div className="inner-banner">
+          <div className="slider-wrap">
+            <div className="text">
+              <h1>Industries</h1>
+              <p>Transforming industries with smart technology, tailored solutions, and measurable results from finance and healthcare to eCommerce and government.</p>
+              <div className="default_btn">
+                <Link href="https://app.oniva.app/" target="_blank">Get started now</Link>
               </div>
             </div>
           </div>
+          <canvas id="canvas"></canvas>
         </div>
-      </section>
 
-      <section className="Industries-page">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="tabWrap">
-                <select
-                  id="mobileTabs"
-                  className="mobile-tabs"
-                  value={activeTab}
-                  onChange={(e) => setActiveTab(e.target.value)}
-                >
-                  {tabData.map((tab) => (
-                    <option key={tab.id} value={tab.id}>
-                      {tab.label}
-                    </option>
-                  ))}
-                </select>
-
-                <div className="tab">
-                  {tabData.map((tab) => (
-                    <button
-                      key={tab.id}
-                      className={`tablinks ${activeTab === tab.id ? 'active' : ''}`}
-                      onClick={() => setActiveTab(tab.id)}
-                      id={tab.id === 'firstTab' ? 'defaultOpen' : undefined}
-                    >
-                      <img src={tab.icon} alt="" />
-                      {tab.label}
-                    </button>
-                  ))}
-                </div>
-
-                {tabData.map((tab) => (
-                  <div
-                    key={tab.id}
-                    id={tab.id}
-                    className="tabcontent"
-                    style={{ display: activeTab === tab.id ? 'block' : 'none' }}
-                  >
-                    {tab.content}
+        {/* Use Cases */}
+        <section className="cases-sec black_bg pt-100">
+          <div className="container">
+            <div className="row">
+              {useCases.map((item, index) => (
+                <div className="col-md-6 col-sm-6" key={index}>
+                  <div className="serv-box">
+                    <div className="img">
+                      <Image
+                        src={`/img/${item.icon}`}
+                        alt={item.title}
+                        width={80}
+                        height={80}
+                        className="img-responsive"
+                      />
+                    </div>
+                    <div className="text">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <div className="sec_group">
-        <section className="ctaSec2">
+        {/* CTA */}
+        <div className="sec_group">
+          <section className="ctaSec2">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -231,13 +99,17 @@ export default function IndustriesPage() {
             </div>
           </div>
         </section>
-        <div className="bgParticles">
-          <div className="geometric-background" id="geometric-background"></div>
-          <div className="particles" id="particles"></div>
-        </div>
-      </div>
 
-      <section className="faq-sec">
+          <div className="bgParticles">
+            <div
+              className="geometric-background"
+              id="geometric-background"
+            ></div>
+            <div className="particles" id="particles"></div>
+          </div>
+        </div>
+
+        <section className="faq-sec">
         <div className="container">
           <div className="row">
             <div className="col-md-10 col-md-offset-1 text-center">
@@ -311,6 +183,7 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
       <ClientScripts />

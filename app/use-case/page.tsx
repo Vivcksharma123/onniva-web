@@ -10,12 +10,12 @@ export default function UseCase() {
   const [activeTab, setActiveTab] = useState('firstTab');
 
   const tabs = [
-    { id: 'firstTab', icon: 'export-ico.png', label: 'Easy Import' },
-    { id: 'secondTab', icon: 'custom-ico.png', label: 'Customization' },
-    { id: 'thirdTab', icon: 'typo-ico.png', label: 'Typography' },
-    { id: 'fourTab', icon: 'color-ico.png', label: 'Color Change' },
-    { id: 'fiveTab', icon: 'woo-ico.png', label: 'WooCommerce' },
-    { id: 'sixTab', icon: 'help-ico.png', label: 'Help Center' }
+    { id: 'firstTab', icon: 'Front-Desk.png', label: 'Front-Desk & Reception (General)' },
+    { id: 'secondTab', icon: 'sales.png', label: 'Sales & Lead Generation' },
+    { id: 'thirdTab', icon: 'Appointment.png', label: 'Appointment & Booking Management' },
+    { id: 'fourTab', icon: 'CustomerSupport.png', label: 'Customer Support & Service' },
+    { id: 'fiveTab', icon: 'hr.png', label: 'Internal Operations (HR & IT)' },
+    { id: 'sixTab', icon: 'Emergency.png', label: 'Emergency & Urgent Escalation' }
   ];
 
   return (
@@ -57,53 +57,55 @@ export default function UseCase() {
                   </div>
 
                   <div id="firstTab" className="tabcontent" style={{display: activeTab === 'firstTab' ? 'block' : 'none'}}>
-                    <div className="img-box">
-                      <Image src="/img/Import-img.jpg" alt="Import" className="img-responsive" width={1200} height={600} />
-                    </div>
-                    <p>Oniva makes it simple to bring all your conversation data into one centralized platform. Quickly upload audio files, call recordings, or existing transcripts from multiple sources without complex setup or technical effort.</p>
-                    <p>Our intelligent ingestion system automatically processes and organizes your data, ensuring accurate transcription, consistent formatting, and secure storage from the moment it’s uploaded. Whether you’re importing historical records or syncing new conversations daily, Oniva keeps everything structured and searchable.</p>
-                    <p>With automated workflows and seamless syncing, your team can spend less time managing files and more time extracting insights, identifying trends, and making informed decisions.</p>
-                    <h4><strong>Key Benefits</strong></h4>
+                    
                     <ul>
-                      <li>Support for audio files, call recordings, and text transcripts</li>
-                      <li>Fast, reliable uploads from multiple sources</li>
-                      <li>Automatic processing and organization of conversation data</li>
-                      <li>Scalable ingestion for growing teams and high volumes</li>
-                      <li>Minimal setup with no technical expertise required</li>
+                        <li><b>24/7 Virtual Receptionist:</b> Answering calls after hours, on weekends, or during holidays so the business never "closes."</li>
+                        <li><b>Overflow Call Handling:</b> Automatically picking up the line when the human staff is already on another call, eliminating busy signals.</li>
+                        <li><b>Basic FAQ Automation:</b> Answering common questions about office hours, parking, directions, or "Are you open today?"</li>
+                        <li><b>Smart Call Routing:</b> Identifying the caller's needs and transferring them to the correct department or person.</li>
                     </ul>
                   </div>
 
                   <div id="secondTab" className="tabcontent" style={{display: activeTab === 'secondTab' ? 'block' : 'none'}}>
-                    <div className="img-box">
-                      <Image src="/img/Import-img.jpg" alt="Import" className="img-responsive" width={1200} height={600} />
-                    </div>
-                    <p>Oniva adapts to the way your team works. Easily tailor dashboards, filters, and reports to reflect your unique workflows, roles, and priorities. Create custom views for different teams, cases, or projects so everyone sees the most relevant data at a glance.</p>
-                    <p>With powerful filtering options, you can organize conversations by date ranges, categories, keywords, or performance metrics. Whether you’re tracking individual cases, monitoring team activity, or reviewing trends over time, Oniva ensures the right insights are always front and center.</p>
-                    <p>This flexibility allows teams to move faster, stay aligned, and make data-driven decisions without digging through unnecessary information.</p>
+                    <ul>
+                        <li><b>Instant Lead Qualification:</b> Asking pre-set discovery questions (e.g., "What is your budget?" or "When are you looking to start?") to filter high-value prospects.</li>
+                        <li><b>Outbound Follow-ups:</b> Automatically calling leads who filled out a web form to book an initial discovery call while interest is still fresh.</li>
+                        <li><b>Promotion Information:</b> Providing details on current sales, discounts, or seasonal offers to callers.</li>
+                        <li><b>Lead Capture:</b> Recording contact details and intent from callers even when the sales team is offline.</li>
+                    </ul>
                   </div>
 
                   <div id="thirdTab" className="tabcontent" style={{display: activeTab === 'thirdTab' ? 'block' : 'none'}}>
-                    <p>Oniva delivers clear, easy-to-read transcripts designed to help teams understand conversations faster and more accurately. Intelligent formatting structures dialogue in a clean, organized layout, making it simple to follow speaker changes and conversation flow.</p>
-                    <p>Key moments within transcripts can be automatically highlighted, allowing users to quickly identify important statements, decisions, or action items. With powerful scanning and navigation tools, long conversations become easy to review—saving time while improving comprehension.</p>
-                    <p>Whether you’re reviewing a single call or analyzing multiple transcripts, Oniva ensures information is accessible, searchable, and actionable.</p>
+                    <ul>
+                        <li><b>Real-time Scheduling:</b> Accessing a live calendar to book, move, or cancel appointments without human intervention.</li>
+                        <li><b>Automated Reminders:</b> Calling clients to confirm upcoming appointments, reducing "no-show" rates.</li>
+                        <li><b>Waitlist Management:</b> Notifying clients on a waitlist when a last-minute cancellation opens up a spot.</li>
+                        <li><b>Service Check-ins:</b> Calling a customer to confirm if they are ready for their scheduled service (e.g., "Our technician is 15 minutes away").</li>
+                    </ul>
                   </div>
 
                   <div id="fourTab" className="tabcontent" style={{display: activeTab === 'fourTab' ? 'block' : 'none'}}>
-                    <p>Oniva allows you to personalize the interface with adjustable colors and theme options that align with your brand identity. Choose layouts and color schemes that create a consistent visual experience across your organization while keeping the interface clean and professional.</p>
-                    <p>Designed for extended working sessions, Oniva’s themes reduce visual fatigue and enhance usability. Whether your team prefers light or dark modes, subtle contrasts, or brand-matched colors, the platform adapts to deliver comfort without compromising clarity or performance.</p>
-                    <p>This level of customization ensures a visually cohesive experience that feels familiar, intuitive, and easy to work with every day.</p>
+                    <ul>
+                        <li><b>Order Status Updates:</b> Letting customers check the status of a shipment or a repair job using an order number.</li>
+                        <li><b>Multi-lingual Support:</b> Communicating with non-English speaking customers in their native language without hiring a translator.</li>
+                        <li><b>Troubleshooting Guides:</b> Walking a customer through basic "Level 1" technical support steps.</li>
+                        <li><b>Claims Intake:</b> Gathering initial information for insurance claims or incident reports before a human adjuster takes over.</li>
+                    </ul>
                   </div>
 
                   <div id="fiveTab" className="tabcontent" style={{display: activeTab === 'fiveTab' ? 'block' : 'none'}}>
-                    <p>Oniva connects effortlessly with your existing tools and platforms, ensuring your workflows remain smooth and uninterrupted. Integrate with third-party systems to sync data, reduce manual work, and keep all communication insights centralized in one place.</p>
-                    <p>Whether you’re connecting CRM systems, eCommerce platforms, or internal tools, Oniva helps streamline operations by automating data flow and maintaining consistency across systems. This unified approach improves collaboration, reduces duplication, and enables teams to act on insights faster.</p>
-                    <p>With flexible integration options, Oniva fits naturally into your current ecosystem without disrupting established processes.</p>
+                    <ul>
+                        <li><b>Employee Self-Service:</b> An internal line for employees to ask about HR policies, holiday balances, or payroll dates.</li>
+                        <li><b>IT Helpdesk Intake:</b> Recording technical issues and generating a support ticket with a full transcript for the IT team.</li>
+                        <li><b>Recruitment Screening:</b> Conducting initial high-volume phone interviews for basic qualifications before a recruiter reviews the log.</li>
+                    </ul>
                   </div>
 
                   <div id="sixTab" className="tabcontent" style={{display: activeTab === 'sixTab' ? 'block' : 'none'}}>
-                    <p>Oniva’s Help Center is designed to support you at every stage—from onboarding to daily usage. Access step-by-step guides, detailed documentation, and FAQs that help you get started quickly and use the platform with confidence.</p>
-                    <p>When questions arise, our expert support resources are always within reach. Whether you’re exploring new features or resolving issues, Oniva ensures reliable assistance so your team stays productive and focused on results.</p>
-                    <p>This ongoing support structure helps teams maximize value from the platform while ensuring a smooth and successful experience over time.</p>
+                    <ul>
+                        <li><b>After-Hours Triage:</b> Determining if a call is a "true emergency" (e.g., a burst pipe or a medical urgent matter) and escalating it to an on-call staff member.</li>
+                        <li><b>Crisis Communication:</b> Providing automated, consistent updates to many callers during a service outage or emergency event.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
