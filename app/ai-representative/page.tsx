@@ -129,6 +129,29 @@ export default function Solutions() {
             </div>
           </div>
         </section>
+        <section className="letsTalk">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="text-center">
+                  <h2>See in Action</h2>
+                </div>
+                <div className="audiowrap">
+                  {audioData.map((audio, index) => (
+                    <AudioPlayer
+                      key={index}
+                      title={audio.title}
+                      description={audio.description}
+                      src={audio.src}
+                      index={index}
+                    />
+                    
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="advantage-sec black_bg">
           <div className="container">
             <div className="row">
@@ -147,6 +170,9 @@ export default function Solutions() {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
+                  <div className="text-center">
+                    <h2>How it works</h2>
+                  </div>
                 <div className="Process-row">
                   <div className="Process-box">
                     <div className="num">1</div>
@@ -169,27 +195,6 @@ export default function Solutions() {
                       <p>As soon as the call ends, you receive a notification, a full transcription, and a logged summary in your dashboard. </p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="letsTalk">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="audiowrap">
-                  {audioData.map((audio, index) => (
-                    <AudioPlayer
-                      key={index}
-                      title={audio.title}
-                      description={audio.description}
-                      src={audio.src}
-                      index={index}
-                    />
-                    
-                  ))}
                 </div>
               </div>
             </div>

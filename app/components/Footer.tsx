@@ -20,7 +20,6 @@ export default function Footer() {
                 <h4>Quick links</h4>
                 <ul>
                   <li><Link href="/">Home</Link></li>
-                  <li><Link href="/features">Features</Link></li>
                   <li><Link href="/industries">Industries</Link></li>
                   <li><Link href="/use-case">Use Cases</Link></li>
                   <li><Link href="/pricing">Pricing</Link></li>
@@ -36,6 +35,7 @@ export default function Footer() {
                 <ul>
                   <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                   <li><Link href="/terms-of-uses">Terms of Uses</Link></li>
+                  <li><Link href="#">Refund Policy</Link></li>
                 </ul>
               </div>
             </div>
