@@ -60,7 +60,7 @@ export default function UseCase() {
           <div className="container">
             <div className="row">
               {useCases.map((item, index) => (
-                <div className="col-md-6 col-sm-6" key={index}>
+                <div className="col-md-12 col-sm-6" key={index}>
                   <div className="serv-box">
                     <div className="img">
                       <Image
