@@ -57,7 +57,9 @@ export default function UseCase() {
                   </div>
 
                   <div id="firstTab" className="tabcontent" style={{display: activeTab === 'firstTab' ? 'block' : 'none'}}>
-                    
+                    <div className="img-box">
+                      <Image src="/img/Reception.webp" alt="Import" className="img-responsive" width={828} height={466} />
+                    </div>
                     <ul>
                         <li><b>24/7 Virtual Receptionist:</b> Answering calls after hours, on weekends, or during holidays so the business never "closes."</li>
                         <li><b>Overflow Call Handling:</b> Automatically picking up the line when the human staff is already on another call, eliminating busy signals.</li>
@@ -67,6 +69,9 @@ export default function UseCase() {
                   </div>
 
                   <div id="secondTab" className="tabcontent" style={{display: activeTab === 'secondTab' ? 'block' : 'none'}}>
+                    <div className="img-box">
+                      <Image src="/img/Sales.webp" alt="Import" className="img-responsive" width={1200} height={600} />
+                    </div>
                     <ul>
                         <li><b>Instant Lead Qualification:</b> Asking pre-set discovery questions (e.g., "What is your budget?" or "When are you looking to start?") to filter high-value prospects.</li>
                         <li><b>Outbound Follow-ups:</b> Automatically calling leads who filled out a web form to book an initial discovery call while interest is still fresh.</li>
@@ -76,6 +81,9 @@ export default function UseCase() {
                   </div>
 
                   <div id="thirdTab" className="tabcontent" style={{display: activeTab === 'thirdTab' ? 'block' : 'none'}}>
+                    <div className="img-box">
+                      <Image src="/img/appointment.webp" alt="Import" className="img-responsive" width={1200} height={600} />
+                    </div>
                     <ul>
                         <li><b>Real-time Scheduling:</b> Accessing a live calendar to book, move, or cancel appointments without human intervention.</li>
                         <li><b>Automated Reminders:</b> Calling clients to confirm upcoming appointments, reducing "no-show" rates.</li>
@@ -85,6 +93,9 @@ export default function UseCase() {
                   </div>
 
                   <div id="fourTab" className="tabcontent" style={{display: activeTab === 'fourTab' ? 'block' : 'none'}}>
+                    <div className="img-box">
+                      <Image src="/img/Customer-Support.webp" alt="Import" className="img-responsive" width={1200} height={600} />
+                    </div>
                     <ul>
                         <li><b>Order Status Updates:</b> Letting customers check the status of a shipment or a repair job using an order number.</li>
                         <li><b>Multi-lingual Support:</b> Communicating with non-English speaking customers in their native language without hiring a translator.</li>
@@ -94,6 +105,9 @@ export default function UseCase() {
                   </div>
 
                   <div id="fiveTab" className="tabcontent" style={{display: activeTab === 'fiveTab' ? 'block' : 'none'}}>
+                    <div className="img-box">
+                      <Image src="/img/Internal.webp" alt="Import" className="img-responsive" width={1200} height={600} />
+                    </div>
                     <ul>
                         <li><b>Employee Self-Service:</b> An internal line for employees to ask about HR policies, holiday balances, or payroll dates.</li>
                         <li><b>IT Helpdesk Intake:</b> Recording technical issues and generating a support ticket with a full transcript for the IT team.</li>
@@ -102,7 +116,10 @@ export default function UseCase() {
                   </div>
 
                   <div id="sixTab" className="tabcontent" style={{display: activeTab === 'sixTab' ? 'block' : 'none'}}>
-                    <ul>
+                    
+                    <div className="img-box">
+                      <Image src="/img/Emergency.webp" alt="Import" className="img-responsive" width={1200} height={600} />
+                    </div><ul>
                         <li><b>After-Hours Triage:</b> Determining if a call is a "true emergency" (e.g., a burst pipe or a medical urgent matter) and escalating it to an on-call staff member.</li>
                         <li><b>Crisis Communication:</b> Providing automated, consistent updates to many callers during a service outage or emergency event.</li>
                     </ul>
