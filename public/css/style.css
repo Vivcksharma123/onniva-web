@@ -15617,13 +15617,17 @@ footer hr.white_line {
 }
 .cases-sec .serv-box {
   margin: 0 0 50px;
-  min-height: 380px;
+  display: flex;
+  text-align: left;
+  align-items: start;
+  gap: 20px;
+  border-bottom: 1px solid #444;
 }
 .cases-sec .serv-box .img {
   text-align: center;
-  height: 60px;
   display: flex;
   margin: 0 auto 20px;
+  width: 180px;
 }
 .cases-sec .serv-box .img img {
   width: 100%;
@@ -15636,6 +15640,9 @@ footer hr.white_line {
 }
 .cases-sec .serv-box p {
   min-height: 150px;
+}
+.cases-sec .serv-box .text {
+  width: calc(100% - 140px);
 }
 
 /*---------------solutionIntro-sec-----------*/
@@ -16939,6 +16946,13 @@ footer hr.white_line {
   .contactDtl-sec .wrap .sec-row .text-box {
     width: 96%;
     margin: 0 auto;
+  }
+  .cases-sec .serv-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cases-sec .serv-box .text {
+    width: 100%;
   }
   .cases-sec .serv-box h3 {
     min-height: auto;

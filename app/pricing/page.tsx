@@ -67,9 +67,6 @@ export default function PricingPage() {
                       <li>Full Dashboard Access &amp; Admin Training.</li>
                     </ul>
                   </div>
-                  <div className="default_btn">
-                    <a href="#">Buy now</a>
-                  </div>
                 </div>
               </div>
               <div className="col-md-7">
@@ -126,9 +123,9 @@ export default function PricingPage() {
                   <p>Professionals love predictable costs. Providing examples helps them visualize their monthly budget.</p>
                   <ul>
                     <li>Scenario: The Growing Small Business</li>
-                    <li>AI Chatbot active on website (5,000 credits)</li>
-                    <li>AI Chatbot active on website (5,000 credits)</li>
-                    <li>AI Voice handling 50 mins of calls/month (3,000 credits)</li>
+                    <li>One AI Chatbot active on website (6,000 credits)</li>
+                    <li>One AI Email active on website (6,000 credits)</li>
+                    <li>1000 mins of calls/month (6,000 credits)</li>
                     <li>Total Monthly Cost: 18,000 Credits ≈ $90/month</li>
                   </ul>
                 </div>
@@ -137,7 +134,7 @@ export default function PricingPage() {
                 <div className="txt-box form-box">
                   <div className="form-box">
                     <div className="lebel">
-                      <label>Chatbot active on website</label>
+                      <label>No. of chatbots?</label>
                       <p><span>5,000</span> credits</p>
                     </div>
                     <input 
@@ -153,7 +150,7 @@ export default function PricingPage() {
                   </div>
                   <div className="form-box">
                     <div className="lebel">
-                      <label>Email Managing</label>
+                      <label>No. of AI Emails?</label>
                       <p><span>10,000</span> credits</p>
                     </div>
                     <input 
@@ -169,7 +166,7 @@ export default function PricingPage() {
                   </div>
                   <div className="form-box">
                     <div className="lebel">
-                      <label>Voice handling (minutes)</label>
+                      <label>Expected Voice Calls (Total Minutes/Month)</label>
                       <p><span>1 credit/sec</span></p>
                     </div>
                     <input 
