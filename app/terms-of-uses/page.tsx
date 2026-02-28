@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
             <div className="col-md-12 col-sm-12">
                 <div className="text">
                     <p><strong>Effective Date:</strong> January 15, 2026</p>
-                    <p>Welcome to <strong>Oniva</strong> (“we,” “our,” or “us”). By accessing or using our website <a href="https://mywebprovider.com/oniva/">https://mywebprovider.com/oniva/</a> and related services, including AI chatbots, AI email responders, and AI representatives (collectively, the “Services”), you agree to comply with and be bound by these Terms of Use.</p>
+                    <p>Welcome to <strong>Oniva</strong> (“we,” “our,” or “us”). By accessing or using our website <a href="https://oniva.app/" rel="noopener">https://oniva.app</a> and related services, including AI chatbots, AI email responders, and AI representatives (collectively, the “Services”), you agree to comply with and be bound by these Terms of Use.</p>
                     <p>If you do not agree to these terms, please do not use our Services.</p>
                     <h3>1. Use of Services</h3>
                     <p>You agree to use Oniva’s Services only for lawful purposes and in accordance with these Terms. You must not:</p>
@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
                     <h3>11. Contact Information</h3>
                     <p>If you have any questions regarding these Terms of Use, please contact us:</p>
                     <p><strong>Email:</strong> <a href="mailto:support@oniva.app">support@oniva.app</a><br />
-                    <strong>Website:</strong> <a href="https://mywebprovider.com/oniva/">https://mywebprovider.com/oniva/</a></p>
+                    <strong>Website:</strong> <a href="https://oniva.app/" rel="noopener">https://oniva.app</a></p>
                 </div>
             </div>
           </div>
