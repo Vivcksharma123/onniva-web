@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Footer() {
   useEffect(() => {
     (window as any).aiChatConfig = {
-      agentId: 'abaaeb7d-f418-4b01-913f-f7703590f381',
+      agentId: 'a89c8cfc-6682-41d9-8c36-08651872d919',
       apiUrl: 'https://app.oniva.app'
     };
     const script = document.createElement('script');
