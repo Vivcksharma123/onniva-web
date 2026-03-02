@@ -1,7 +1,21 @@
+'use client';
+
+import { useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  useEffect(() => {
+    (window as any).aiChatConfig = {
+      agentId: 'abaaeb7d-f418-4b01-913f-f7703590f381',
+      apiUrl: 'https://app.oniva.app'
+    };
+    const script = document.createElement('script');
+    script.src = 'https://app.oniva.app/chat-widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }, []);
+
   return (
     <>
       <footer>
@@ -23,7 +37,7 @@ export default function Footer() {
                   <li><Link href="/industries">Industries</Link></li>
                   <li><Link href="/use-case">Use Cases</Link></li>
                   <li><Link href="/pricing">Pricing</Link></li>
-                  <li><Link href="https://mywebprovider.com/oniva/">Latest News</Link></li>
+                  <li><Link href="https://blog.oniva.app/">Latest News</Link></li>
                   <li><Link href="/contact">Contact</Link></li>
                 </ul>
               </div>
@@ -44,12 +58,12 @@ export default function Footer() {
               <div className="dtl-box">
                 <h4>Get in Touch</h4>
                 <ul>
-                  <li><i className="fa fa-phone" aria-hidden="true"></i><a href="tel:+1123-231234">(+1) 123-123-1234</a></li>
+                  <li><i className="fa fa-phone" aria-hidden="true"></i><a href="tel:+15069015682">+1 (506)901 5682</a></li>
                   <li><i className="fa fa-envelope" aria-hidden="true"></i><a href="mailto:support@oniva.app">support@oniva.app</a></li>
                 </ul>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
       </footer>
 
