@@ -44,7 +44,7 @@ export default function Header() {
                 <li className={pathname === '/use-case' ? 'active' : ''}><Link href="/use-case">Use Cases</Link></li>
                 <li className={pathname === '/industries' ? 'active' : ''}><Link href="/industries">Industries</Link></li>
                 <li className={pathname === '/pricing' ? 'active' : ''}><Link href="/pricing">Pricing</Link></li>
-                <li><Link href="https://mywebprovider.com/oniva/">Latest News</Link></li>
+                <li><Link href="https://blog.oniva.app/">Latest News</Link></li>
                 <li className={pathname === '/contact' ? 'active' : ''}><Link href="/contact">Contact</Link></li>
                 <li className="login_btn"><Link href="https://app.oniva.app/" target="_blank">Get Started</Link></li>
               </ul>
