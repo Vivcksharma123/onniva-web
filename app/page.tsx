@@ -183,22 +183,32 @@ export default function Home() {
                 </div>
                 <div className="col-md-12">
                   <div id="StoriesSlides" className="owl-carousel owl-theme">
-                    {[1, 2, 3, 4].map((_, idx) => (
-                      <div className="item" key={idx}>
+                    <div className="item">
                         <div className="testimonial-bx">
-                          <div className="rating">
-                            <i className="fa fa-star" aria-hidden="true"></i>
-                            <i className="fa fa-star" aria-hidden="true"></i>
-                            <i className="fa fa-star" aria-hidden="true"></i>
-                            <i className="fa fa-star" aria-hidden="true"></i>
-                            <i className="fa fa-star" aria-hidden="true"></i>
-                          </div>
-                          <p>Oniva transformed our customer support. We cut response times in half and satisfaction jumped.</p>
-                          <h4>Support Manager, SaaS Company</h4>
+                          <div className="rating"></div>
+                          <p>After deploying the AI chat widget on our website, we experienced a 35% increase in lead conversions within the first two months. 
+          The chatbot instantly engages visitors, qualifies prospects, and routes high-intent inquiries directly to our sales team. 
+          It works 24/7, ensuring we never miss an opportunity — even outside business hours.</p>
+                          <h4>Marketing Director</h4>
+                            
                         </div>
-                        
-                      </div>
-                    ))}
+                    </div>
+                    <div className="item">
+                        <div className="testimonial-bx">
+                          <div className="rating"></div>
+                          <p>The AI Email Responder completely transformed how we manage customer communication. It automatically categorizes, prioritizes, and responds to hundreds of daily inquiries with accurate, human-like replies. Our team now focuses on strategic growth instead of repetitive emails, and our response time has improved dramatically.</p>
+                          <h4>E-Commerce Founder</h4>
+                            
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="testimonial-bx">
+                          <div className="rating"></div>
+                          <p>Oniva’s AI solution streamlined our entire customer support process. We reduced response times by over 50% and significantly increased customer satisfaction scores. The system handles FAQs, appointment scheduling, and common troubleshooting instantly, allowing our support agents to concentrate on complex cases.</p>
+                          <h4>Support Manager</h4>
+                            
+                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
