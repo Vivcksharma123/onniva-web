@@ -15067,7 +15067,7 @@ footer hr.white_line {
   text-align: center;
   position: fixed;
   bottom: 90px;
-  right: 20px;
+  right: 25px;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
