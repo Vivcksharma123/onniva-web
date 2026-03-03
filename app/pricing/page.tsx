@@ -93,8 +93,8 @@ export default function PricingPage() {
                       <p><strong>Credit Consumption</strong></p>
                       <ul>
                         <li>1 Credit / second</li>
-                        <li>10,000 Credits / month</li>
-                        <li>5,000 Credits / month</li>
+                        <li>6,000 Credits / month</li>
+                        <li>6,000 Credits / month</li>
                       </ul>
                     </div>
                     <div className="fullcol">
@@ -271,7 +271,7 @@ export default function PricingPage() {
             <h2>Start Your Professional AI Transformation Today.</h2>
             <p>Volume discounts available for Enterprise clients requiring over 1,000,000 credits per month.</p>
             <div className="default_btn2">
-              <a href="/contact">Signup Now</a>
+              <a href="/contact">Contact Us</a>
             </div>
           </div>
           <svg width="100%" id="wave_svg" viewBox="0 10 500 5">
