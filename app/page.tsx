@@ -188,7 +188,7 @@ export default function Home() {
                           <div className="rating"></div>
                           <p>After deploying the AI chat widget on our website, we experienced a 35% increase in lead conversions within the first two months. 
           The chatbot instantly engages visitors, qualifies prospects, and routes high-intent inquiries directly to our sales team. 
-          It works 24/7, ensuring we never miss an opportunity — even outside business hours.</p>
+          It works 24/7, ensuring we never miss an opportunity even outside business hours.</p>
                           <h4>Marketing Director</h4>
                             
                         </div>
