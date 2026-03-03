@@ -51,6 +51,7 @@ export default function InquiryForm() {
       setStatus("sending");
       await new Promise((resolve) => setTimeout(resolve, 1500));
       setStatus("success");
+      setTimeout(() => setStatus(""), 5000);
 
       setFormData({
         name: "",
@@ -64,6 +65,7 @@ export default function InquiryForm() {
       setSubmitted(false);
     } catch (error) {
       setStatus("error");
+      setTimeout(() => setStatus(""), 5000);
     }
   };
 
@@ -84,6 +86,40 @@ export default function InquiryForm() {
           boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
         }}>
           {phoneError}
+        </div>
+      )}
+      {status === "success" && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: '#28a745',
+          color: 'white',
+          padding: '15px',
+          textAlign: 'center',
+          zIndex: 99999,
+          fontWeight: '500',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
+        }}>
+          Message sent successfully!
+        </div>
+      )}
+      {status === "error" && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: '#dc3545',
+          color: 'white',
+          padding: '15px',
+          textAlign: 'center',
+          zIndex: 99999,
+          fontWeight: '500',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
+        }}>
+          Failed to send message. Please try again.
         </div>
       )}
       <div className="inquiries_form">
@@ -161,18 +197,6 @@ export default function InquiryForm() {
                 >
                   {status === "sending" ? "Sending..." : "Submit Your Inquiry"}
                 </button>
-
-                {status === "success" && (
-                  <p style={{ color: 'green', marginTop: '10px' }}>
-                    Message sent successfully!
-                  </p>
-                )}
-
-                {status === "error" && (
-                  <p style={{ color: 'red', marginTop: '10px' }}>
-                    Failed to send message. Please try again.
-                  </p>
-                )}
               </div>
             </div>
           </div>
