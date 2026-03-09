@@ -203,7 +203,7 @@ export default function Contact() {
                       alt="Contact"
                       style={{
                         width: '100%',
-                        height: '640px',
+                        height: '670px',
                         objectFit: 'cover'
                       }}
                     />
