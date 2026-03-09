@@ -134,6 +134,7 @@ export default function InquiryForm() {
           right: 0,
           margin: '0 auto',
           width:'60%',
+          borderRadius: '10px',
           backgroundColor: '#28a745',
           color: 'white',
           padding: '15px',
@@ -148,9 +149,11 @@ export default function InquiryForm() {
       {status === "error" && (
         <div style={{
           position: 'fixed',
-          top: 0,
+          top: '10%',
           left: 0,
           right: 0,
+          margin: '0 auto',
+          width:'60%',
           borderRadius: '10px',
           backgroundColor: '#dc3545',
           color: 'white',
