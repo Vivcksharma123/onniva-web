@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./InquiryForm.css";
 
 export default function InquiryForm() {
@@ -16,6 +16,17 @@ export default function InquiryForm() {
   const [submitted, setSubmitted] = useState(false);
   const [status, setStatus] = useState("");
   const [phoneError, setPhoneError] = useState("");
+  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: "" });
+
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
+
+  const generateCaptcha = () => {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    setCaptcha({ num1, num2, answer: "" });
+  };
 
   const validateForm = () => {
     const newErrors: Record<string, boolean> = {};
@@ -37,6 +48,12 @@ export default function InquiryForm() {
       setPhoneError("");
     }
 
+    if (!captcha.answer.trim()) {
+      setPhoneError("Please answer the security question");
+      setTimeout(() => setPhoneError(""), 5000);
+      newErrors.captcha = true;
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -46,6 +63,13 @@ export default function InquiryForm() {
     setSubmitted(true);
 
     if (!validateForm()) return;
+
+    if (parseInt(captcha.answer) !== captcha.num1 + captcha.num2) {
+      setPhoneError("Incorrect answer. Please try again.");
+      setTimeout(() => setPhoneError(""), 5000);
+      generateCaptcha();
+      return;
+    }
 
     try {
       setStatus("sending");
@@ -68,15 +92,18 @@ export default function InquiryForm() {
           message: "",
         });
 
+        generateCaptcha();
         setErrors({});
         setSubmitted(false);
       } else {
         setStatus("error");
         setTimeout(() => setStatus(""), 5000);
+        generateCaptcha();
       }
     } catch (error) {
       setStatus("error");
       setTimeout(() => setStatus(""), 5000);
+      generateCaptcha();
     }
   };
 
@@ -124,6 +151,7 @@ export default function InquiryForm() {
           top: 0,
           left: 0,
           right: 0,
+          borderRadius: '10px',
           backgroundColor: '#dc3545',
           color: 'white',
           padding: '15px',
@@ -201,14 +229,28 @@ export default function InquiryForm() {
               </div>
             </div>
 
-            <div className="col-sm-12 text-left">
-              <div className="form-group">
+            <div className="col-sm-12">
+              <div className="form-group" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                <div>
+                  <label style={{ marginBottom: '10px', display: 'block' }}>
+                    Security Question: What is {captcha.num1} + {captcha.num2}?
+                  </label>
+                  <input
+                    type="number"
+                    className={`form-control ${submitted && errors.captcha ? "input-error" : ""}`}
+                    placeholder="Your answer"
+                    value={captcha.answer}
+                    onChange={(e) => setCaptcha({ ...captcha, answer: e.target.value })}
+                    style={{ maxWidth: '200px' }}
+                  />
+                </div>
                 <button
                   type="submit"
                   className="blue_btn"
                   disabled={status === "sending"}
+                  style={{ marginTop: '30px' }}
                 >
-                  {status === "sending" ? "Sending..." : "Submit Your Inquiry"}
+                  {status === "sending" ? "Sending..." : "Submit"}
                 </button>
               </div>
             </div>
