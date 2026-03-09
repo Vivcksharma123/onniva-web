@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     await transporter.verify();
     console.log('SMTP connection OK');
 
-    await transporter.sendMail({
+     transporter.sendMail({
       from: `"Contact Us" <${process.env.SMTP_USER}>`,
       to: process.env.EMAIL_TO,
       replyTo: body.email,

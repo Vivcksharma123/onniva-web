@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import "./InquiryForm.css"; // CSS file (below)
+import "./InquiryForm.css";
 
 export default function InquiryForm() {
   const [formData, setFormData] = useState({
@@ -49,20 +49,31 @@ export default function InquiryForm() {
 
     try {
       setStatus("sending");
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus("success");
-      setTimeout(() => setStatus(""), 5000);
-
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        subject: "",
-        message: "",
+      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
       });
 
-      setErrors({});
-      setSubmitted(false);
+      if (response.ok) {
+        setStatus("success");
+        setTimeout(() => setStatus(""), 5000);
+
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+
+        setErrors({});
+        setSubmitted(false);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus(""), 5000);
+      }
     } catch (error) {
       setStatus("error");
       setTimeout(() => setStatus(""), 5000);
@@ -91,9 +102,11 @@ export default function InquiryForm() {
       {status === "success" && (
         <div style={{
           position: 'fixed',
-          top: 0,
+          top: '20%',
           left: 0,
           right: 0,
+          margin: '0 auto',
+          width:'60%',
           backgroundColor: '#28a745',
           color: 'white',
           padding: '15px',
@@ -102,7 +115,7 @@ export default function InquiryForm() {
           fontWeight: '500',
           boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
         }}>
-          Message sent successfully!
+          Thank you for contacting us! Our team will review your inquiry and get back to you as soon as possible.
         </div>
       )}
       {status === "error" && (
