@@ -149,7 +149,7 @@ export default function InquiryForm() {
       {status === "error" && (
         <div style={{
           position: 'fixed',
-          top: '10%',
+          top: '20%',
           left: 0,
           right: 0,
           margin: '0 auto',
