@@ -7,8 +7,8 @@ import Link from "next/link";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Oniva - AI-Driven Call, Chat & Email Automation for Smarter Customer Engagement',
-  description: 'Automate responses, streamline support, and boost conversions with intelligent AI Call, chat and email assistants. No coding required. Transform customer engagement with Oniva.',
+  title: 'AI Automation Platform | AI Chatbot & Email Responder – Oniva',
+  description: 'Oniva is an AI-powered automation platform offering AI chatbots, AI email responders, and AI representatives to automate conversations, respond instantly, and improve customer experience.',
 };
 
 

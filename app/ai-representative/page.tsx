@@ -8,8 +8,8 @@ import type { Metadata } from 'next';
 import AudioAnalyzer from "../components/AudioAnalyzer";
 
 export const metadata: Metadata = {
-  title: 'AI Representative - 24/7 Intelligent Virtual Agent | Oniva',
-  description: 'Deploy an AI Representative that handles customer interactions, automates communications, and supports your team around the clock. Multilingual, real-time transcription, and instant notifications.',
+  title: 'AI Representative for Customer Support | AI Virtual Agent – Oniva',
+  description: 'Automate customer conversations with an AI representative. Oniva’s AI virtual agent answers questions, handles support requests, and provides instant assistance across chat and email.',
 };
 
 

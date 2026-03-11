@@ -5,8 +5,8 @@ import Image from "next/image";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Chatbot - Smart Conversational Assistant for Your Website | Oniva',
-  description: 'Deploy a smart conversational AI chatbot on your website or app that understands context and delivers helpful, human-like responses. 24/7 customer engagement with no coding required.',
+  title: 'AI Chatbot platform for Customer Support & Lead Generation | Oniva',
+  description: 'Deploy an AI chatbot platform to automate customer support and capture leads 24/7. Oniva AI chatbot instantly answers questions, reduces support workload, and improves customer experience.',
 };
 
 

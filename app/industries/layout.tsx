@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Industries - Oniva | Solutions for Finance, Healthcare, eCommerce & More',
-  description: 'Discover how Oniva transforms industries with tailored technology solutions. Serving financial services, healthcare, manufacturing, eCommerce, government, and defense sectors.',
+  title: 'AI Automation Solutions for Different Industries | Oniva AI',
+  description: 'Explore AI chatbot and automation solutions for industries including SaaS, ecommerce, healthcare, and customer support. Oniva helps businesses scale support with AI.',
 };
 
 export default function IndustriesLayout({
