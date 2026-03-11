@@ -6,8 +6,8 @@ import Image from "next/image";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Email Responder - Automate Email Replies Instantly | Oniva',
-  description: 'Automate email responses with intelligent AI that understands intent, replies instantly, and keeps your communication consistent and professional. 24/7 email handling with personalized replies.',
+  title: 'AI Email Responder | Automatically Reply to Emails with AI – Oniva',
+  description: 'Use Oniva’s AI email responder to automatically reply to customer emails, reduce response time, and streamline support. Smart AI automation for inbox management.',
 };
 
 export default function AIemail() {

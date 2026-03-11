@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Oniva | Get in Touch with Our Team',
-  description: 'Contact Oniva for support, inquiries, or business opportunities. Reach out to our team via email at support@oniva.app or call us at +1 (506)901 5682',
+  title: 'Contact Oniva | AI Customer Support Automation Platform',
+  description: 'Contact the Oniva team to learn more about AI chatbots, AI email responders, and customer support automation. Get expert help to automate your business communication.',
 };
 
 export default function ContactLayout({

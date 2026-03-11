@@ -233,7 +233,7 @@ export default function InquiryForm() {
             </div>
 
             <div className="col-sm-12">
-              <div className="form-group" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+              <div className="form-group recaptcha">
                 <div>
                   <label style={{ marginBottom: '10px', display: 'block' }}>
                     Security Question: What is {captcha.num1} + {captcha.num2}?
