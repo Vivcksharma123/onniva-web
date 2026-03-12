@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: 'Automate responses, streamline support, and boost conversions with intelligent AI Call, chat and email assistants. No coding required. Transform customer engagement with Oniva.',
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

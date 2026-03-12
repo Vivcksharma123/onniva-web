@@ -2,16 +2,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ClientScripts from "./components/ClientScripts";
 import Image from "next/image";
-import Link from "next/link";
 import Script from "next/script";
-
+import Link from "next/link";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Automation Platform | AI Chatbot & Email Responder – Oniva',
   description: 'Oniva is an AI-powered automation platform offering AI chatbots, AI email responders, and AI representatives to automate conversations, respond instantly, and improve customer experience.',
 };
-
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -60,16 +58,17 @@ const faqSchema = {
   ],
 };
 
+
 export default function Home() {
   return (
     <>
-      {/* FAQ Schema */}
-      <Script
-        id="faq-schema"
+    <Script
+        id="ai-chatbot-faq-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
       />
-
       <Header />
       <main>
         <div id="home-slider">
