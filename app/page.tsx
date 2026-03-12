@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import ClientScripts from "./components/ClientScripts";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 import type { Metadata } from 'next';
 
@@ -12,9 +13,63 @@ export const metadata: Metadata = {
 };
 
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do I need coding skills to use Oniva?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No, Oniva's interface is intuitive and easy to use. You do not need any coding skills to launch and manage AI assistants on the platform.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I customize the AI's tone and style?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Oniva allows you to customize the AI's tone and response style so it matches your brand voice, messaging, and communication preferences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What platforms does Oniva integrate with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oniva integrates with many CRM systems, email platforms, and website builders through APIs and plugins, allowing seamless automation across your business tools.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is my data secure?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Oniva follows industry best practices for data protection, including encryption, secure infrastructure, and privacy compliance standards.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there customer support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Oniva provides customer support including live assistance and onboarding guidance to help users successfully set up and use the platform.",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      {/* FAQ Schema */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <Header />
       <main>
         <div id="home-slider">

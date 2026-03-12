@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="I5Ao4p6akqiJQdI10edTTqxBp2h-rE5e3WOgvrw84qI" />
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/owl.carousel.min.css" />
         <link rel="stylesheet" href="/css/animate.css" />
@@ -40,8 +41,25 @@ export default function RootLayout({
             gtag('config', 'G-T4VS8TSCP4');
           `}
         </Script>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Oniva",
+              "url": "https://oniva.app/",
+              "logo": "https://oniva.app/img/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1 (506)901 5682",
+                "contactType": "customer support"
+              }
+            })
+          }}
+        />
       </head>
-      <meta name="google-site-verification" content="I5Ao4p6akqiJQdI10edTTqxBp2h-rE5e3WOgvrw84qI" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
