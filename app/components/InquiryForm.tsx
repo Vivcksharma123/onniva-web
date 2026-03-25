@@ -233,20 +233,7 @@ export default function InquiryForm() {
             </div>
 
             <div className="col-sm-12">
-              <div className="form-group recaptcha">
-                <div>
-                  <label style={{ marginBottom: '10px', display: 'block' }}>
-                    Security Question: What is {captcha.num1} + {captcha.num2}?
-                  </label>
-                  <input
-                    type="number"
-                    className={`form-control ${submitted && errors.captcha ? "input-error" : ""}`}
-                    placeholder="Your answer"
-                    value={captcha.answer}
-                    onChange={(e) => setCaptcha({ ...captcha, answer: e.target.value })}
-                    style={{ maxWidth: '200px' }}
-                  />
-                </div>
+              <div className="form-group">
                 <button
                   type="submit"
                   className="blue_btn"

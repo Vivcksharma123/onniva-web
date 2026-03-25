@@ -14972,6 +14972,39 @@ footer hr.white_line {
   border-top: 1px solid #a2a2a2;
   margin: 40px 0;
 }
+footer .DownloadButtons {
+  margin: 20px 0 0;
+}
+footer .DownloadButtons > div {
+  margin: 0 0 10px;
+}
+footer .DownloadButtons a {
+  background: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  font-size: 20px;
+  padding-left: 60px;
+  text-align: left;
+  line-height: 1;
+  color: #000000;
+  display: inline-block;
+  max-width: 206px;
+  min-width: 206px;
+}
+footer .DownloadButtons a:hover {
+  background: #22d3ee;
+}
+footer .DownloadButtons a img {
+  position: absolute;
+  left: 15px;
+  width: 36px;
+}
+footer .DownloadButtons a small {
+  display: block;
+  font-size: 12px;
+}
 
 .last_foot {
   padding: 20px 0;
@@ -15053,6 +15086,7 @@ footer hr.white_line {
   transition: background 0.3s ease-in-out;
   font-weight: 600;
   background-size: 300% 100%;
+  width: 50%;
 }
 .inquiries_form .blue_btn:hover {
   color: #fff !important;
@@ -15619,9 +15653,19 @@ footer hr.white_line {
 .single-blog .post-meta span i {
   color: #22d3ee;
 }
+.single-blog h3 {
+  margin-bottom: 5px;
+}
 .single-blog img {
   width: 100%;
   margin: 0 0 10px;
+}
+.single-blog .para_list p {
+  margin: 0 0 25px 25px;
+}
+.single-blog ul {
+  margin-bottom: 30px;
+  margin-left: 25px;
 }
 .single-blog ul li {
   color: #fff;
@@ -17057,6 +17101,9 @@ footer hr.white_line {
   }
   .pricing_sec .pricing_box .col-row .col:first-child {
     border-bottom: 1px solid #fff;
+  }
+  .inquiries_form .blue_btn {
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {

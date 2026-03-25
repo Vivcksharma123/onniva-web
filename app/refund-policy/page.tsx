@@ -20,7 +20,7 @@ export default function RefundPolicy() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 col-sm-12">
-                <div className="text">
+                <div className="text para_list">
                     <h3>1. Setup Fee Refund Eligibility</h3>
                     <ul>
                         <li>The <b>setup fee</b> is refundable if AI Integration has not commenced within 7 days from the date of purchase.</li>
