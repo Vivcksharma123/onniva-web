@@ -62,6 +62,18 @@ export default function Footer() {
                   <li><i className="fa fa-envelope" aria-hidden="true"></i><a href="mailto:support@oniva.app">support@oniva.app</a></li>
                 </ul>
               </div>
+              <div className="DownloadButtons">
+                <div>
+                  <a href="#">
+                    <Image src="img/app-store.svg" alt="Logo" width={150} height={50} />
+                    <small>Available on the</small>App Store</a>
+                    </div>
+                    <div>
+                  <a href="#">
+                    <Image src="img/play-store.svg" alt="Logo" width={150} height={50} />
+                    <small>GET IT ON</small>Google Play</a>
+                </div>
+              </div>
             </div>
           </div> 
         </div>
@@ -79,9 +91,9 @@ export default function Footer() {
         </div>
       </section>
 
-      <a id="BackToTop" className="show">
+      {/* <a id="BackToTop" className="show">
         <i className="fa fa-chevron-up" aria-hidden="true"></i>
-      </a>
+      </a> */}
     </>
   );
 }
