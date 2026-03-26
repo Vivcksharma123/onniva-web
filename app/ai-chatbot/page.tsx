@@ -14,7 +14,7 @@ export default function AIchatbot() {
               <h1>AI Chatbot</h1>
               <p>Transform your website engagement with an AI Chatbot that responds instantly, captures leads, and provides 24/7 support all powered by advanced artificial intelligence. It improves customer interaction, automates responses, and helps you convert visitors into customers without human intervention.</p>
               <div className="default_btn">
-                <a href="https://app.oniva.app/" target="_blank">get started now</a>
+                <a href="https://app.oniva.app/" target="_blank" rel="noopener noreferrer">get started now</a>
               </div>
             </div>
           </div>

@@ -29,7 +29,7 @@ export default function Representative() {
               <h1>The AI Voice Representative Your Business Deserves.</h1>
               <p><strong>Never miss a call. Never miss an opportunity.</strong><br />A professional, multi-lingual phone representative that answers calls, manages inquiries, and books appointments 24/7. No hold music, no missed leads.</p>
               <div className="default_btn">
-                <a href="https://app.oniva.app/" target="_blank">get started now</a>
+                <a href="https://app.oniva.app/" target="_blank" rel="noopener noreferrer">get started now</a>
               </div>
             </div>
           </div>

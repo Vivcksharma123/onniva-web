@@ -6,7 +6,6 @@ export const runtime = 'nodejs';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    console.log('Incoming form data:', body);
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -20,7 +19,6 @@ export async function POST(request: Request) {
 
     // 🔍 Verify SMTP connection
     await transporter.verify();
-    console.log('SMTP connection OK');
 
      transporter.sendMail({
       from: `"Contact Us" <${process.env.SMTP_USER}>`,
@@ -48,7 +46,6 @@ ${body.message}
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('MAIL ERROR FULL:', error);
     return NextResponse.json(
       { error: 'Internal mail error' },
       { status: 500 }

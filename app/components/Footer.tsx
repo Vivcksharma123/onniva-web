@@ -84,7 +84,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-md-12 col-sm-12">
               <div className="privacy_policy">
-                <p>© 2026 Oniva.app. All rights reserved. Powered by<a href="https://www.f5buddy.com/" target="_blank">F5 Buddy Pvt Ltd</a></p>
+                <p>© 2026 Oniva.app. All rights reserved. Powered by<a href="https://www.f5buddy.com/" target="_blank" rel="noopener noreferrer">F5 Buddy Pvt Ltd</a></p>
               </div>
             </div>
           </div>
