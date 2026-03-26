@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./InquiryForm.css";
 
 export default function InquiryForm() {
@@ -16,17 +16,6 @@ export default function InquiryForm() {
   const [submitted, setSubmitted] = useState(false);
   const [status, setStatus] = useState("");
   const [phoneError, setPhoneError] = useState("");
-  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: "" });
-
-  useEffect(() => {
-    generateCaptcha();
-  }, []);
-
-  const generateCaptcha = () => {
-    const num1 = Math.floor(Math.random() * 10) + 1;
-    const num2 = Math.floor(Math.random() * 10) + 1;
-    setCaptcha({ num1, num2, answer: "" });
-  };
 
   const validateForm = () => {
     const newErrors: Record<string, boolean> = {};
@@ -48,12 +37,6 @@ export default function InquiryForm() {
       setPhoneError("");
     }
 
-    if (!captcha.answer.trim()) {
-      setPhoneError("Please answer the security question");
-      setTimeout(() => setPhoneError(""), 5000);
-      newErrors.captcha = true;
-    }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -63,13 +46,6 @@ export default function InquiryForm() {
     setSubmitted(true);
 
     if (!validateForm()) return;
-
-    if (parseInt(captcha.answer) !== captcha.num1 + captcha.num2) {
-      setPhoneError("Incorrect answer. Please try again.");
-      setTimeout(() => setPhoneError(""), 5000);
-      generateCaptcha();
-      return;
-    }
 
     try {
       setStatus("sending");
@@ -92,18 +68,15 @@ export default function InquiryForm() {
           message: "",
         });
 
-        generateCaptcha();
         setErrors({});
         setSubmitted(false);
       } else {
         setStatus("error");
         setTimeout(() => setStatus(""), 5000);
-        generateCaptcha();
       }
     } catch (error) {
       setStatus("error");
       setTimeout(() => setStatus(""), 5000);
-      generateCaptcha();
     }
   };
 

@@ -51,9 +51,7 @@ export default function AudioAnalyzer() {
         document.addEventListener('click', resumeContext, { once: true });
         
         setIsReady(true);
-        console.log('AudioMotion initialized');
       } catch (error) {
-        console.error('Init error:', error);
       }
     }
   };
@@ -74,7 +72,7 @@ export default function AudioAnalyzer() {
 
     const url = URL.createObjectURL(file);
     audioRef.current.src = url;
-    audioRef.current.play().catch(err => console.error('Play error:', err));
+    audioRef.current.play().catch(() => {});
   };
 
   return (
@@ -83,7 +81,7 @@ export default function AudioAnalyzer() {
         src="https://cdn.jsdelivr.net/npm/audiomotion-analyzer@4.3.0/dist/audioMotion-analyzer.min.js"
         strategy="afterInteractive"
         onLoad={initAudioMotion}
-        onError={(e) => console.error('Script load error:', e)}
+        onError={() => {}}
       />
       <div style={{ margin: 0, background: '#0b0b0b', color: 'white', minHeight: '100vh', padding: '20px' }}>
         <h2 style={{ textAlign: 'center', margin: '20px 0', fontWeight: 500 }}>AudioMotion Analyzer</h2>

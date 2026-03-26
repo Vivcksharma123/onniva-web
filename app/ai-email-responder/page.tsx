@@ -14,7 +14,7 @@ export default function AIemail() {
               <h1>AI Email Responder</h1>
               <p>Automate email responses with intelligent AI that understands intent, replies instantly, and keeps your communication consistent and professional.</p>
               <div className="default_btn">
-                <a href="https://app.oniva.app/" target="_blank">get started now</a>
+                <a href="https://app.oniva.app/" target="_blank" rel="noopener noreferrer">get started now</a>
               </div>
             </div>
           </div>
