@@ -64,12 +64,12 @@ export default function Footer() {
               </div>
               <div className="DownloadButtons">
                 <div>
-                  <a href="#">
+                  <a href="https://apps.apple.com/us/app/oniva-app-lead-management/id6760888751" target="_blank" rel="noopener noreferrer">
                     <Image src="img/app-store.svg" alt="Logo" width={150} height={50} />
                     <small>Available on the</small>App Store</a>
                     </div>
                     <div>
-                  <a href="#">
+                  <a href="https://play.google.com/store/apps/details?id=com.oniva" target="_blank" rel="noopener noreferrer">
                     <Image src="img/play-store.svg" alt="Logo" width={150} height={50} />
                     <small>GET IT ON</small>Google Play</a>
                 </div>
