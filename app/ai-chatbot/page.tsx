@@ -24,7 +24,7 @@ export default function AIchatbot() {
         <section className="solutionIntro-sec">
           <div className="slider-wrap">
             <div className="imgBox">
-              <Image src="/img/solution-intro-1.jpg" alt="Solution" className="img-responsive" width={600} height={400} />
+              <Image src="/img/chat-bot.webp" alt="Solution" className="img-responsive" width={600} height={400} />
             </div>
             <div className="text">
               <div className="text-wrap">
@@ -57,7 +57,7 @@ export default function AIchatbot() {
                 </div>
                 <br />
                 <div className="small-img">
-                  <Image src="/img/chatboat-img-2.jpg" alt="Solution" width={400} height={300} />
+                  <Image src="/img/ai-chatbot-2.webp" alt="ai-chatbot" width={400} height={300} />
                 </div>
               </div>
               <div className="col-sm-6">

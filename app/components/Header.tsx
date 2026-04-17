@@ -39,6 +39,9 @@ export default function Header() {
                     <li>
                       <Link href="/ai-email-responder" className={pathname === '/ai-email-responder' ? 'active' : ''}>AI Email Responder</Link>
                     </li>
+                    <li>
+                      <Link href="/website-leads" className={pathname === '/website-leads' ? 'active' : ''}>Website Leads</Link>
+                    </li>
                   </ul>
                 </li>
                 <li className={pathname === '/use-case' ? 'active' : ''}><Link href="/use-case">Use Cases</Link></li>

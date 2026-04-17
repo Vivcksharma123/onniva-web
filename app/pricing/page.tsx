@@ -11,6 +11,7 @@ export default function PricingPage() {
   const [voiceMins, setVoiceMins] = useState(0);
   const [emailQty, setEmailQty] = useState(0);
   const [chatQty, setChatQty] = useState(0);
+  const [leadsQty, setLeadsQty] = useState(0);
   const [totalCredits, setTotalCredits] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
 
@@ -18,7 +19,8 @@ export default function PricingPage() {
     const voiceCredits = voiceMins * 60;
     const emailCredits = emailQty * 6000;
     const chatCredits = chatQty * 6000;
-    const total = voiceCredits + emailCredits + chatCredits;
+    const leadsCredits = leadsQty * 1000;
+    const total = voiceCredits + emailCredits + chatCredits + leadsCredits;
     const cost = (total / 2000) * 10;
     setTotalCredits(total);
     setTotalCost(cost);
@@ -26,7 +28,7 @@ export default function PricingPage() {
 
   useEffect(() => {
     calculateCredits();
-  }, [voiceMins, emailQty, chatQty]);
+  }, [voiceMins, emailQty, chatQty, leadsQty]);
   return (
     <>
       <Header />
@@ -88,6 +90,7 @@ export default function PricingPage() {
                         <li>AI Voice Representative</li>
                         <li>AI Email Responder</li>
                         <li>AI Chatbot</li>
+                        <li>Website Leads</li>
                       </ul>
                     </div>
                     <div className="col">
@@ -96,6 +99,7 @@ export default function PricingPage() {
                         <li>1 Credit / second</li>
                         <li>6,000 Credits / month</li>
                         <li>6,000 Credits / month</li>
+                        <li>1,000 Credits / month</li>
                       </ul>
                     </div>
                     <div className="fullcol">
@@ -104,6 +108,7 @@ export default function PricingPage() {
                         <li>Only pay for the exact duration of the conversation.</li>
                         <li>Unlimited automated replies for one professional inbox.</li>
                         <li>24/7 web-based customer support for one domain.</li>
+                        <li>Automated lead capture and qualification from your website.</li>
                       </ul>
                     </div>
                   </div>
@@ -127,7 +132,8 @@ export default function PricingPage() {
                     <li>One AI Chatbot active on website (6,000 credits)</li>
                     <li>One AI Email active on website (6,000 credits)</li>
                     <li>1000 mins of calls/month (6,000 credits)</li>
-                    <li>Total Monthly Cost: 18,000 Credits ≈ $90/month</li>
+                    <li>One Website Lead (1,000 credits)</li>
+                    <li>Total Monthly Cost: 19,000 Credits ≈ $95/month</li>
                   </ul>
                 </div>
               </div>
@@ -177,6 +183,22 @@ export default function PricingPage() {
                       max="999"
                       value={voiceMins || ''}
                       onChange={(e) => setVoiceMins(Math.min(999, Math.max(0, Number(e.target.value))))}
+                      placeholder="0"
+                      style={{ outline: 'none' }}
+                    />
+                  </div>
+                  <div className="form-box">
+                    <div className="lebel">
+                      <label>No. of Website Leads?</label>
+                      <p><span>1,000</span> credits</p>
+                    </div>
+                    <input 
+                      type="number" 
+                      id="leads-qty"
+                      min="0"
+                      max="999"
+                      value={leadsQty || ''}
+                      onChange={(e) => setLeadsQty(Math.min(999, Math.max(0, Number(e.target.value))))}
                       placeholder="0"
                       style={{ outline: 'none' }}
                     />
