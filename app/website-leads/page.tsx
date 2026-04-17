@@ -24,7 +24,7 @@ export default function WebsiteLeads() {
         <section className="solutionIntro-sec">
           <div className="slider-wrap">
             <div className="imgBox">
-              <Image src="/img/solution-intro-1.webp" alt="Solution" className="img-responsive" width={600} height={400} />
+              <Image src="/img/website-01.webp" alt="Solution" className="img-responsive" width={600} height={400} />
             </div>
             <div className="text">
               <div className="text-wrap">
@@ -40,7 +40,7 @@ export default function WebsiteLeads() {
             <div className="row">
               <div className="col-md-12">
                 <div className="img-box">
-                  <Image src="/img/contact-1.webp" alt="Solution" className="img-responsive" width={1200} height={600} />
+                  <Image src="/img/website-020.webp" alt="Solution" className="img-responsive" width={1200} height={600} />
                 </div>
               </div>
               <div className="col-sm-6">
@@ -57,7 +57,7 @@ export default function WebsiteLeads() {
                 </div>
                 <br />
                 <div className="small-img">
-                  <Image src="/img/chatboat-img-2.webp" alt="Solution" width={400} height={300} />
+                  <Image src="/img/website-03.webp" alt="Solution" width={400} height={300} />
                 </div>
               </div>
               <div className="col-sm-6">
