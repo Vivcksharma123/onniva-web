@@ -93,21 +93,21 @@ export default function Representative() {
                 <div className="sldier_box">
                   <div id="slide_screen" className="owl-carousel">
                     <div className="item">
-                        <img src="/img/screen-1.webp" alt="" />
+                        <img src="/img/dashboard-01.webp" alt="" />
                         <div className="inner">
-                          <a href="#">Dashboard  <span><Image src="/img/arrow_purple.png" width={20} height={20} alt="arrow" /></span></a>
+                          <a href="https://app.oniva.app/">Calling Agents  <span><Image src="/img/arrow_purple.png" width={20} height={20} alt="arrow" /></span></a>
                         </div>
                     </div>
                     <div className="item black">
-                        <img src="/img/screen-2.webp" alt="" />
+                        <img src="/img/dashboard-02.webp" alt="" />
                         <div className="inner">
-                          <a href="#">Dashboard  <span><Image src="/img/arrow_purple.png" width={20} height={20} alt="arrow" /></span></a>
+                          <a href="https://app.oniva.app/">Call Logs  <span><Image src="/img/arrow_purple.png" width={20} height={20} alt="arrow" /></span></a>
                         </div>
                     </div>
                     <div className="item">
-                        <img src="/img/screen-3.webp" alt="" />
+                        <img src="/img/dashboard-03.webp" alt="" />
                         <div className="inner">
-                          <a href="#">Dashboard  <span><Image src="/img/arrow_purple.png" width={20} height={20} alt="arrow" /></span></a>
+                          <a href="https://app.oniva.app/">Leads  <span><Image src="/img/arrow_purple.png" width={20} height={20} alt="arrow" /></span></a>
                         </div>
                     </div>
                       
