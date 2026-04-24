@@ -2,20 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function Footer() {
-  useEffect(() => {
-    (window as any).aiChatConfig = {
-      agentId: 'a89c8cfc-6682-41d9-8c36-08651872d919',
-      apiUrl: 'https://app.oniva.app'
-    };
-    const script = document.createElement('script');
-    script.src = 'https://app.oniva.app/chat-widget.js';
-    script.async = true;
-    document.head.appendChild(script);
-  }, []);
-
   return (
     <>
       <footer>
