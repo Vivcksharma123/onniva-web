@@ -42,6 +42,9 @@ export default function Header() {
                     <li>
                       <Link href="/website-leads" className={pathname === '/website-leads' ? 'active' : ''}>Website Leads</Link>
                     </li>
+                    <li>
+                      <Link href="/whatsapp-agent" className={pathname === '/whatsapp-agent' ? 'active' : ''}>Whatsapp Agent</Link>
+                    </li>
                   </ul>
                 </li>
                 <li className={pathname === '/use-case' ? 'active' : ''}><Link href="/use-case">Use Cases</Link></li>
