@@ -189,7 +189,7 @@ export default function PricingPage() {
                   </div>
                   <div className="form-box">
                     <div className="lebel">
-                      <label>No. of Website Leads?</label>
+                      <label>No. of Websites?</label>
                       <p><span>1,000</span> credits</p>
                     </div>
                     <input 
